@@ -581,15 +581,15 @@
 
                 <!-- Tab Buttons container -->
                 <div class="bg-slate-100 dark:bg-[#161B26]/50 p-1.5 rounded-xl border border-gray-200 dark:border-white/10 flex flex-wrap gap-1 mb-8 shadow-inner">
-                    <button onclick="switchPillarTab(1, true)" id="pillar-tab-1" class="pillar-tab flex-1 min-w-[140px] py-3.5 px-4 text-center rounded-lg text-xs md:text-sm font-bold transition duration-300 bg-[#A80000] dark:bg-brand-blue text-white shadow-lg flex items-center justify-center gap-2">
+                    <button onclick="switchPillarTab(1, true)" id="pillar-tab-1" class="pillar-tab flex-1 min-w-[140px] py-3.5 px-4 text-center rounded-lg text-xs md:text-sm font-bold transition duration-300 bg-[#A80000] text-white shadow-md flex items-center justify-center gap-2">
                         <i class="fa-solid fa-clock-rotate-left text-sm"></i>
                         <span>1. DI SẢN</span>
                     </button>
-                    <button onclick="switchPillarTab(2, true)" id="pillar-tab-2" class="pillar-tab flex-1 min-w-[140px] py-3.5 px-4 text-center rounded-lg text-xs md:text-sm font-bold transition duration-300 text-slate-500 dark:text-gray-400 hover:text-slate-800 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/5 flex items-center justify-center gap-2">
+                    <button onclick="switchPillarTab(2, true)" id="pillar-tab-2" class="pillar-tab flex-1 min-w-[140px] py-3.5 px-4 text-center rounded-lg text-xs md:text-sm font-bold transition duration-300 text-slate-650 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/50 dark:hover:bg-white/5 flex items-center justify-center gap-2">
                         <i class="fa-solid fa-users text-sm"></i>
                         <span>2. ĐỘC GIẢ</span>
                     </button>
-                    <button onclick="switchPillarTab(3, true)" id="pillar-tab-3" class="pillar-tab flex-1 min-w-[140px] py-3.5 px-4 text-center rounded-lg text-xs md:text-sm font-bold transition duration-300 text-slate-500 dark:text-gray-400 hover:text-slate-800 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/5 flex items-center justify-center gap-2">
+                    <button onclick="switchPillarTab(3, true)" id="pillar-tab-3" class="pillar-tab flex-1 min-w-[140px] py-3.5 px-4 text-center rounded-lg text-xs md:text-sm font-bold transition duration-300 text-slate-650 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/50 dark:hover:bg-white/5 flex items-center justify-center gap-2">
                         <i class="fa-solid fa-network-wired text-sm"></i>
                         <span>3. HẠ TẦNG</span>
                     </button>
@@ -715,24 +715,72 @@
             <div class="text-center max-w-3xl mx-auto mb-8">
                 <h2 class="text-brand-blue font-bold tracking-wider uppercase text-sm mb-2">Hệ sinh thái</h2>
                 <h3 class="text-3xl md:text-4xl font-serif font-bold text-slate-800 dark:text-white mb-3">Các dạng thức Sản phẩm Truyền thông</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-5xl mx-auto mt-6 p-5 sm:p-6 rounded-2xl bg-white dark:bg-brand-slate/40 border border-gray-200 dark:border-white/10 text-sm">
-                    <div>
-                        <h4 class="font-bold text-slate-800 dark:text-white mb-4 uppercase tracking-wider text-sm border-b border-gray-200 dark:border-white/10 pb-2 flex items-center gap-1.5"><i class="fa-solid fa-gears text-brand-blue"></i> Hình thức triển khai:</h4>
-                        <ul class="space-y-3.5 text-slate-650 dark:text-gray-300">
-                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-blue dark:text-blue-400 mt-1"></i> <span>Tag/landing thương hiệu riêng trên Báo Lao Động</span></li>
-                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-blue dark:text-blue-400 mt-1"></i> <span>PR, branded content và trải nghiệm sản phẩm</span></li>
-                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-blue dark:text-blue-400 mt-1"></i> <span>Video, talkshow và nội dung đa nền tảng</span></li>
-                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-blue dark:text-blue-400 mt-1"></i> <span>Tích hợp banner, social và SEO tìm kiếm</span></li>
-                        </ul>
+            </div>
+
+            <div class="max-w-6xl mx-auto mt-6 mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-white to-slate-50/50 dark:from-brand-slate/40 dark:to-brand-slate/20 border border-gray-200 dark:border-white/10 shadow-xl relative overflow-hidden">
+                <!-- Background Accent Glows -->
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-blue/5 rounded-full blur-[100px] pointer-events-none"></div>
+                <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-brand-red/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 relative z-10">
+                    <!-- Column 1: Hình thức triển khai -->
+                    <div class="space-y-5">
+                        <h4 class="font-serif font-black text-slate-800 dark:text-white text-base tracking-wide uppercase flex items-center gap-2.5 border-b-2 border-brand-blue/30 pb-3">
+                            <span class="w-8 h-8 rounded-lg bg-brand-blue/10 text-brand-blue flex items-center justify-center text-sm"><i class="fa-solid fa-gears"></i></span>
+                            Hình thức triển khai
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <!-- Card 1.1 -->
+                            <div class="bg-white/60 dark:bg-white/[0.02] border border-gray-200/60 dark:border-white/5 rounded-xl p-3.5 hover:border-brand-blue/40 dark:hover:border-brand-blue/30 hover:bg-white dark:hover:bg-white/[0.06] transition-all duration-300 shadow-sm hover:shadow flex flex-col justify-between group">
+                                <div class="w-6.5 h-6.5 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center text-xs mb-2.5 group-hover:scale-110 transition-transform"><i class="fa-solid fa-check"></i></div>
+                                <p class="text-slate-700 dark:text-gray-300 font-bold text-xs leading-relaxed">Tag/landing thương hiệu riêng trên Báo Lao Động</p>
+                            </div>
+                            <!-- Card 1.2 -->
+                            <div class="bg-white/60 dark:bg-white/[0.02] border border-gray-200/60 dark:border-white/5 rounded-xl p-3.5 hover:border-brand-blue/40 dark:hover:border-brand-blue/30 hover:bg-white dark:hover:bg-white/[0.06] transition-all duration-300 shadow-sm hover:shadow flex flex-col justify-between group">
+                                <div class="w-6.5 h-6.5 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center text-xs mb-2.5 group-hover:scale-110 transition-transform"><i class="fa-solid fa-check"></i></div>
+                                <p class="text-slate-700 dark:text-gray-300 font-bold text-xs leading-relaxed">PR, branded content và trải nghiệm sản phẩm</p>
+                            </div>
+                            <!-- Card 1.3 -->
+                            <div class="bg-white/60 dark:bg-white/[0.02] border border-gray-200/60 dark:border-white/5 rounded-xl p-3.5 hover:border-brand-blue/40 dark:hover:border-brand-blue/30 hover:bg-white dark:hover:bg-white/[0.06] transition-all duration-300 shadow-sm hover:shadow flex flex-col justify-between group">
+                                <div class="w-6.5 h-6.5 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center text-xs mb-2.5 group-hover:scale-110 transition-transform"><i class="fa-solid fa-check"></i></div>
+                                <p class="text-slate-700 dark:text-gray-300 font-bold text-xs leading-relaxed">Video, talkshow và nội dung đa nền tảng</p>
+                            </div>
+                            <!-- Card 1.4 -->
+                            <div class="bg-white/60 dark:bg-white/[0.02] border border-gray-200/60 dark:border-white/5 rounded-xl p-3.5 hover:border-brand-blue/40 dark:hover:border-brand-blue/30 hover:bg-white dark:hover:bg-white/[0.06] transition-all duration-300 shadow-sm hover:shadow flex flex-col justify-between group">
+                                <div class="w-6.5 h-6.5 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center text-xs mb-2.5 group-hover:scale-110 transition-transform"><i class="fa-solid fa-check"></i></div>
+                                <p class="text-slate-700 dark:text-gray-300 font-bold text-xs leading-relaxed">Tích hợp banner, social và SEO tìm kiếm</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-slate-800 dark:text-white mb-4 uppercase tracking-wider text-sm border-b border-gray-200 dark:border-white/10 pb-2 flex items-center gap-1.5"><i class="fa-solid fa-chart-line text-brand-blue"></i> Giá trị mang lại:</h4>
-                        <ul class="space-y-3.5 text-slate-650 dark:text-gray-300">
-                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-blue dark:text-blue-400 mt-1"></i> <span>Duy trì hiện diện thương hiệu dài hạn</span></li>
-                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-blue dark:text-blue-400 mt-1"></i> <span>Tăng độ phủ và khả năng tìm kiếm trên Google</span></li>
-                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-blue dark:text-blue-400 mt-1"></i> <span>Gia tăng uy tín và mức độ ghi nhớ thương hiệu</span></li>
-                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-blue dark:text-blue-400 mt-1"></i> <span>Hỗ trợ truyền thông theo từng chiến dịch</span></li>
-                        </ul>
+
+                    <!-- Column 2: Giá trị mang lại -->
+                    <div class="space-y-5">
+                        <h4 class="font-serif font-black text-slate-800 dark:text-white text-base tracking-wide uppercase flex items-center gap-2.5 border-b-2 border-brand-red/30 pb-3">
+                            <span class="w-8 h-8 rounded-lg bg-brand-red/10 text-[#A80000] flex items-center justify-center text-sm"><i class="fa-solid fa-chart-line"></i></span>
+                            Giá trị mang lại
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <!-- Card 2.1 -->
+                            <div class="bg-white/60 dark:bg-white/[0.02] border border-gray-200/60 dark:border-white/5 rounded-xl p-3.5 hover:border-brand-red/40 dark:hover:border-brand-red/30 hover:bg-white dark:hover:bg-white/[0.06] transition-all duration-300 shadow-sm hover:shadow flex flex-col justify-between group">
+                                <div class="w-6.5 h-6.5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs mb-2.5 group-hover:scale-110 transition-transform"><i class="fa-solid fa-check"></i></div>
+                                <p class="text-slate-700 dark:text-gray-300 font-bold text-xs leading-relaxed">Duy trì hiện diện thương hiệu dài hạn</p>
+                            </div>
+                            <!-- Card 2.2 -->
+                            <div class="bg-white/60 dark:bg-white/[0.02] border border-gray-200/60 dark:border-white/5 rounded-xl p-3.5 hover:border-brand-red/40 dark:hover:border-brand-red/30 hover:bg-white dark:hover:bg-white/[0.06] transition-all duration-300 shadow-sm hover:shadow flex flex-col justify-between group">
+                                <div class="w-6.5 h-6.5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs mb-2.5 group-hover:scale-110 transition-transform"><i class="fa-solid fa-check"></i></div>
+                                <p class="text-slate-700 dark:text-gray-300 font-bold text-xs leading-relaxed">Tăng độ phủ và khả năng tìm kiếm trên Google</p>
+                            </div>
+                            <!-- Card 2.3 -->
+                            <div class="bg-white/60 dark:bg-white/[0.02] border border-gray-200/60 dark:border-white/5 rounded-xl p-3.5 hover:border-brand-red/40 dark:hover:border-brand-red/30 hover:bg-white dark:hover:bg-white/[0.06] transition-all duration-300 shadow-sm hover:shadow flex flex-col justify-between group">
+                                <div class="w-6.5 h-6.5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs mb-2.5 group-hover:scale-110 transition-transform"><i class="fa-solid fa-check"></i></div>
+                                <p class="text-slate-700 dark:text-gray-300 font-bold text-xs leading-relaxed">Gia tăng uy tín và mức độ ghi nhớ thương hiệu</p>
+                            </div>
+                            <!-- Card 2.4 -->
+                            <div class="bg-white/60 dark:bg-white/[0.02] border border-gray-200/60 dark:border-white/5 rounded-xl p-3.5 hover:border-brand-red/40 dark:hover:border-brand-red/30 hover:bg-white dark:hover:bg-white/[0.06] transition-all duration-300 shadow-sm hover:shadow flex flex-col justify-between group">
+                                <div class="w-6.5 h-6.5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs mb-2.5 group-hover:scale-110 transition-transform"><i class="fa-solid fa-check"></i></div>
+                                <p class="text-slate-700 dark:text-gray-300 font-bold text-xs leading-relaxed">Hỗ trợ truyền thông theo từng chiến dịch</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1457,8 +1505,8 @@
     <section id="lien-he" class="py-8 md:py-10 bg-white dark:bg-[#0B0F19] text-slate-800 dark:text-white border-b border-gray-250 dark:border-white/10 transition-colors duration-300">
         <div class="container mx-auto px-4 lg:px-8 max-w-6xl">
             <div class="bg-white dark:bg-brand-slate rounded-2xl shadow-xl overflow-hidden border border-gray-200 dark:border-white/10 flex flex-col md:flex-row">
-                <div class="md:w-5/12 bg-slate-50 dark:bg-brand-dark/20 p-8 flex flex-col justify-center border-r border-gray-200 dark:border-white/10 text-slate-850 dark:text-white">
-                    <h3 class="text-2xl font-serif font-bold text-slate-850 dark:text-white mb-3">Trung tâm Hợp tác Truyền thông</h3>
+                <div class="md:w-1/2 bg-slate-50 dark:bg-brand-dark/20 p-8 flex flex-col justify-center border-r border-gray-200 dark:border-white/10 text-slate-850 dark:text-white">
+                    <h3 class="text-xl md:text-2xl font-serif font-bold text-slate-850 dark:text-white mb-3 md:whitespace-nowrap">Trung tâm Hợp tác Truyền thông Báo Lao Động</h3>
                     <p class="text-slate-550 dark:text-gray-350 mb-6 text-sm">Sẵn sàng đồng hành cùng Quý đối tác trong các chiến dịch truyền thông hiệu quả, chuyên nghiệp và có sức lan tỏa rộng rãi.</p>
                     
                     <div class="space-y-4">
@@ -1486,7 +1534,7 @@
                     </div>
                 </div>
                 
-                <div class="md:w-7/12 p-10 bg-white dark:bg-brand-slate text-slate-800 dark:text-white">
+                <div class="md:w-1/2 p-10 bg-white dark:bg-brand-slate text-slate-800 dark:text-white">
                     <h4 class="text-xl font-bold text-slate-850 dark:text-white mb-6">Gửi Yêu Cầu Hợp Tác</h4>
                     <form id="contact-form" class="space-y-5">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -2293,18 +2341,37 @@
                     currentPillarIndex = tabIndex;
                 }
 
-                // Remove active status from all tabs
+                // Remove active status from all tabs and reset inactive style
                 const tabs = document.querySelectorAll('.pillar-tab');
                 tabs.forEach(tab => {
-                    tab.classList.remove('bg-white', 'text-brand-blue', 'border', 'border-white/10', 'shadow-sm');
-                    tab.classList.add('text-gray-300', 'hover:text-brand-blue', 'hover:bg-white/50');
+                    tab.classList.remove(
+                        'bg-[#A80000]', 'bg-amber-500', 'bg-[#0A5CFF]', 'dark:bg-[#0A5CFF]', 'dark:bg-brand-blue',
+                        'text-white', 'shadow-md', 'shadow-lg'
+                    );
+                    tab.classList.add(
+                        'text-slate-655', 'dark:text-gray-400', 
+                        'hover:text-slate-900', 'dark:hover:text-white', 
+                        'hover:bg-slate-200/50', 'dark:hover:bg-white/5',
+                        'bg-transparent'
+                    );
                 });
                 
-                // Add active status to current tab
+                // Add active status with appropriate theme color to current tab
                 const activeTab = document.getElementById(`pillar-tab-${tabIndex}`);
                 if (activeTab) {
-                    activeTab.classList.add('bg-white', 'text-brand-blue', 'border', 'border-white/10', 'shadow-sm');
-                    activeTab.classList.remove('text-gray-300', 'hover:text-brand-blue', 'hover:bg-white/50');
+                    activeTab.classList.remove(
+                        'text-slate-655', 'dark:text-gray-400', 
+                        'hover:text-slate-900', 'dark:hover:text-white', 
+                        'hover:bg-slate-200/50', 'dark:hover:bg-white/5',
+                        'bg-transparent'
+                    );
+                    if (tabIndex === 1) {
+                        activeTab.classList.add('bg-[#A80000]', 'text-white', 'shadow-md');
+                    } else if (tabIndex === 2) {
+                        activeTab.classList.add('bg-amber-500', 'text-white', 'shadow-md');
+                    } else if (tabIndex === 3) {
+                        activeTab.classList.add('bg-[#0A5CFF]', 'text-white', 'shadow-md');
+                    }
                 }
                 
                 // Hide all panels
