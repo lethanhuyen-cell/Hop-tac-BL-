@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 32" fill="none">
+  <text x="2" y="22" font-family="'Inter', sans-serif" font-weight="800" font-size="20" fill="#1f2937" letter-spacing="-0.5">masan</text>
+  <path d="M72 10C74 13 78 13 80 10C79 14 81 18 78 20C75 20 73 17 72 10Z" fill="#f58220"/>
+  <circle cx="76" cy="14" r="3" fill="#f58220"/>
+  <text x="84" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#6b7280" letter-spacing="0.5">GROUP</text>
+</svg>
