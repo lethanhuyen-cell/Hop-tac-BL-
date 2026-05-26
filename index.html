@@ -98,13 +98,17 @@
             content: '';
             position: absolute;
             bottom: -6px;
-            right: 20px;
+            right: 24px;
             width: 12px;
             height: 12px;
-            background: #ffffff;
-            border-right: 1px solid #E5E7EB;
-            border-bottom: 1px solid #E5E7EB;
+            background: inherit;
+            border-right: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
             transform: rotate(45deg);
+        }
+        .dark .chat-bubble-arrow::after {
+            border-right: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
         /* Editorial Styling */
         .editorial-title-left {
@@ -2123,7 +2127,7 @@
                 }
             }
 
-            // Append Message Helper
+             // Append Message Helper
             function appendMessage(sender, text) {
                 if (!chatbotMessages) return;
                 const timeStr = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
@@ -2131,12 +2135,14 @@
                 messageDiv.className = `flex items-start gap-2.5 ${sender === 'user' ? 'justify-end' : ''}`;
                 
                 const avatarHtml = sender === 'user' ? '' : `
-                    <div class="w-8 h-8 rounded-full overflow-hidden bg-gray-100 flex-shrink-0">
+                    <div class="w-8 h-8 rounded-full overflow-hidden bg-gray-105 flex-shrink-0 shadow-sm border border-gray-200 dark:border-white/10">
                         <img src="images/laodong_assistant_avatar.png" alt="Consultant" class="w-full h-full object-cover">
                     </div>
                 `;
                 
-                const bgClass = sender === 'user' ? 'bg-brand-blue text-white font-extrabold rounded-tr-none' : 'bg-white border border-gray-200 text-slate-900 font-black rounded-tl-none';
+                const bgClass = sender === 'user' 
+                    ? 'bg-gradient-to-r from-blue-600 to-indigo-650 dark:from-brand-blue dark:to-blue-600 text-white font-bold rounded-2xl rounded-tr-none shadow-sm' 
+                    : 'bg-white dark:bg-[#1E2530] border border-gray-150 dark:border-slate-800 text-slate-800 dark:text-gray-200 font-medium rounded-2xl rounded-tl-none shadow-sm';
                 
                 messageDiv.innerHTML = `
                     ${avatarHtml}
@@ -2144,7 +2150,7 @@
                         <div class="${bgClass} p-3 rounded-2xl shadow-sm text-xs leading-relaxed">
                             ${text}
                         </div>
-                        <span class="text-[9px] text-gray-400 ${sender === 'user' ? 'self-end' : 'self-start'}">${timeStr}</span>
+                        <span class="text-[9px] text-gray-400 dark:text-gray-500 ${sender === 'user' ? 'self-end mr-1' : 'self-start ml-1'}">${timeStr}</span>
                     </div>
                 `;
                 
@@ -2383,73 +2389,90 @@
 
     <!-- Chatbot Widget HTML Structure -->
     <div id="chatbot-widget" class="fixed bottom-24 right-4 sm:bottom-28 sm:right-6 lg:bottom-32 lg:right-8 z-50 flex flex-col items-end gap-3 font-sans">
-        <div id="chatbot-bubble" class="hidden bg-[#0B0F19] text-white border border-brand-blue/50 shadow-[0_10px_30px_rgba(10,92,255,0.3)] rounded-2xl p-3.5 max-w-[calc(100vw-2.5rem)] w-[240px] sm:w-[280px] text-xs relative chat-bubble-arrow transition-all duration-500 opacity-0 translate-y-2 cursor-pointer group hover:scale-[1.03]">
-            <button id="close-chatbot-bubble" class="absolute top-2 right-2 text-white/50 hover:text-white transition p-1" aria-label="Đóng lời thoại">
+        <!-- Speech Bubble (Greeting Bubble - Glassmorphism Light/Dark dynamic) -->
+        <div id="chatbot-bubble" class="hidden bg-white/90 dark:bg-[#161B26]/90 backdrop-blur-lg text-slate-800 dark:text-gray-100 border border-slate-200/80 dark:border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.08)] dark:shadow-[0_15px_40px_rgba(0,0,0,0.3)] rounded-2xl p-4 max-w-[calc(100vw-2.5rem)] w-[285px] sm:w-[320px] text-xs font-medium relative chat-bubble-arrow transition-all duration-500 opacity-0 translate-y-2 cursor-pointer group hover:scale-[1.02] hover:border-brand-blue/30 dark:hover:border-brand-blue/30">
+            <button id="close-chatbot-bubble" class="absolute top-2.5 right-2.5 text-gray-400 dark:text-gray-500 hover:text-slate-800 dark:hover:text-white transition p-1" aria-label="Đóng lời thoại">
                 <i class="fa-solid fa-xmark text-[10px]"></i>
             </button>
-            <div class="pr-2 text-left">
-                <h6 class="font-black text-brand-blue uppercase tracking-widest text-[9px] mb-1 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span> Hỗ trợ trực tuyến</h6>
-                <p class="leading-relaxed text-gray-100 font-black text-[11px] mt-1">Xin chào! Chúng tôi có thể giúp gì cho bạn? Trò chuyện với chuyên viên để nhận báo giá & tư vấn nhanh.</p>
-                <span class="inline-flex items-center gap-1 text-[11px] font-black text-brand-blue mt-2 group-hover:text-blue-400 transition">Bắt đầu chat <i class="fa-solid fa-arrow-right text-[10px] animate-pulse"></i></span>
+            <div class="pr-3 text-left">
+                <h6 class="font-bold text-[#A80000] dark:text-brand-blue uppercase tracking-widest text-[9px] mb-1.5 flex items-center gap-1.5">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-450 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span> 
+                    Hỗ trợ trực tuyến
+                </h6>
+                <p class="leading-relaxed text-slate-650 dark:text-gray-300 text-[11px] font-medium mt-1">Xin chào! Chúng tôi có thể giúp gì cho bạn? Trò chuyện với chuyên viên để nhận báo giá & tư vấn nhanh.</p>
+                <span class="inline-flex items-center gap-1 text-[11px] font-bold text-[#A80000] dark:text-brand-blue mt-2.5 group-hover:underline">Bắt đầu chat <i class="fa-solid fa-arrow-right text-[10px] animate-pulse"></i></span>
             </div>
         </div>
 
         <!-- Chat Window -->
-        <div id="chatbot-window" class="hidden w-[calc(100vw-2rem)] sm:w-[380px] h-[480px] sm:h-[520px] max-h-[80vh] sm:max-h-[580px] bg-white border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col transition-all duration-300 opacity-0 transform translate-y-4">
-            <!-- Header -->
-            <div class="bg-brand-blue p-4 text-white flex items-center justify-between shadow-md">
-                <div class="flex items-center gap-3">
-                    <div class="relative w-10 h-10 rounded-full border-2 border-white/30 overflow-hidden bg-gray-100">
+        <div id="chatbot-window" class="hidden w-[calc(100vw-2rem)] sm:w-[380px] h-[480px] sm:h-[530px] max-h-[80vh] sm:max-h-[580px] bg-white/95 dark:bg-[#161B26]/95 backdrop-blur-lg border border-gray-200/80 dark:border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col transition-all duration-300 opacity-0 transform translate-y-4">
+            <!-- Header (Premium Gradient incorporating Brand Colors) -->
+            <div class="bg-gradient-to-r from-[#A80000] via-[#BE1E2D] to-brand-blue p-4 text-white flex items-center justify-between shadow-md relative overflow-hidden">
+                <!-- Decorative background elements -->
+                <div class="absolute -right-6 -top-6 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+                <div class="absolute -left-6 -bottom-6 w-20 h-20 bg-black/10 rounded-full blur-xl"></div>
+                
+                <div class="flex items-center gap-3 relative z-10">
+                    <div class="relative w-10 h-10 rounded-full border-2 border-white/30 overflow-hidden bg-gray-150 shadow-inner">
                         <img src="images/laodong_assistant_avatar.png" alt="Consultant" class="w-full h-full object-cover">
                     </div>
                     <div>
-                        <h5 class="font-bold text-sm leading-tight">Tư vấn Báo Lao Động</h5>
-                        <p class="text-[10px] text-red-100 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span> Đang trực tuyến</p>
+                        <h5 class="font-bold text-sm leading-tight tracking-wide">Tư vấn Báo Lao Động</h5>
+                        <p class="text-[10px] text-white/80 flex items-center gap-1.5 mt-0.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span> 
+                            Hỗ trợ trực tuyến 24/7
+                        </p>
                     </div>
                 </div>
-                <button id="close-chatbot-window" class="text-white/80 hover:text-white transition p-1.5" aria-label="Close Chat">
+                <button id="close-chatbot-window" class="text-white/85 hover:text-white transition p-1.5 hover:bg-white/10 rounded-lg" aria-label="Close Chat">
                     <i class="fa-solid fa-xmark text-lg"></i>
                 </button>
             </div>
 
             <!-- Chat Content Area -->
-            <div id="chatbot-messages" class="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50/80 scrollbar-thin">
+            <div id="chatbot-messages" class="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-50/50 dark:bg-slate-900/40 scrollbar-thin">
                 <!-- Welcome Message from Agent -->
                 <div class="flex items-start gap-2.5">
-                    <div class="w-8 h-8 rounded-full overflow-hidden bg-gray-100 flex-shrink-0">
+                    <div class="w-8 h-8 rounded-full overflow-hidden bg-gray-100 flex-shrink-0 shadow-sm border border-gray-200 dark:border-white/10">
                         <img src="images/laodong_assistant_avatar.png" alt="Consultant" class="w-full h-full object-cover">
                     </div>
                     <div class="flex flex-col gap-1 max-w-[75%]">
-                        <div class="bg-white border border-gray-200 p-3 rounded-2xl rounded-tl-none shadow-sm text-xs text-slate-900 font-black leading-relaxed">
+                        <div class="bg-white dark:bg-[#1E2530] border border-gray-150 dark:border-slate-800 p-3 rounded-2xl rounded-tl-none shadow-sm text-xs text-slate-800 dark:text-gray-200 leading-relaxed font-medium">
                             Chào bạn! Tôi là chuyên viên hỗ trợ của Trung tâm Hợp tác Truyền thông Báo Lao Động. Rất vui được hỗ trợ bạn. Bạn đang cần tư vấn hay nhận báo giá dịch vụ nào ạ?
                         </div>
-                        <span class="text-[9px] text-gray-400 self-start">Vừa xong</span>
+                        <span class="text-[9px] text-gray-400 dark:text-gray-500 self-start ml-1">Vừa xong</span>
                     </div>
                 </div>
             </div>
 
             <!-- Quick Suggestions Buttons -->
-            <div id="chatbot-suggestions" class="p-3 bg-white border-t border-white/10 flex flex-wrap gap-2 justify-start">
-                <button class="chat-suggest-btn text-xs text-slate-800 font-black bg-slate-100 hover:bg-brand-blue hover:text-white border border-gray-250 hover:border-brand-blue px-3 py-1.5 rounded-full transition-all duration-300">Báo giá bài viết PR</button>
-                <button class="chat-suggest-btn text-xs text-slate-800 font-black bg-slate-100 hover:bg-brand-blue hover:text-white border border-gray-250 hover:border-brand-blue px-3 py-1.5 rounded-full transition-all duration-300">Báo giá Banner Quảng cáo</button>
-                <button class="chat-suggest-btn text-xs text-slate-800 font-black bg-slate-100 hover:bg-brand-blue hover:text-white border border-gray-250 hover:border-brand-blue px-3 py-1.5 rounded-full transition-all duration-300">Tổ chức Sự kiện / Hội thảo</button>
-                <button class="chat-suggest-btn text-xs text-slate-800 font-black bg-slate-100 hover:bg-brand-blue hover:text-white border border-gray-250 hover:border-brand-blue px-3 py-1.5 rounded-full transition-all duration-300">Tải tài liệu Media Kit 2026</button>
+            <div id="chatbot-suggestions" class="p-3 bg-white/95 dark:bg-[#161B26]/95 border-t border-gray-150 dark:border-slate-800 flex flex-wrap gap-2 justify-start">
+                <button class="chat-suggest-btn text-xs text-slate-700 dark:text-gray-300 font-bold bg-slate-50 dark:bg-[#1E2530] hover:bg-brand-blue hover:text-white dark:hover:bg-brand-blue dark:hover:text-white border border-gray-200 dark:border-slate-800 hover:border-brand-blue dark:hover:border-brand-blue px-3 py-1.5 rounded-full transition-all duration-300 shadow-sm hover:shadow">Báo giá bài viết PR</button>
+                <button class="chat-suggest-btn text-xs text-slate-700 dark:text-gray-300 font-bold bg-slate-50 dark:bg-[#1E2530] hover:bg-brand-blue hover:text-white dark:hover:bg-brand-blue dark:hover:text-white border border-gray-200 dark:border-slate-800 hover:border-brand-blue dark:hover:border-brand-blue px-3 py-1.5 rounded-full transition-all duration-300 shadow-sm hover:shadow">Báo giá Banner Quảng cáo</button>
+                <button class="chat-suggest-btn text-xs text-slate-700 dark:text-gray-300 font-bold bg-slate-50 dark:bg-[#1E2530] hover:bg-brand-blue hover:text-white dark:hover:bg-brand-blue dark:hover:text-white border border-gray-200 dark:border-slate-800 hover:border-brand-blue dark:hover:border-brand-blue px-3 py-1.5 rounded-full transition-all duration-300 shadow-sm hover:shadow">Tổ chức Sự kiện / Hội thảo</button>
+                <button class="chat-suggest-btn text-xs text-slate-700 dark:text-gray-300 font-bold bg-slate-50 dark:bg-[#1E2530] hover:bg-brand-blue hover:text-white dark:hover:bg-brand-blue dark:hover:text-white border border-gray-200 dark:border-slate-800 hover:border-brand-blue dark:hover:border-brand-blue px-3 py-1.5 rounded-full transition-all duration-300 shadow-sm hover:shadow">Tải tài liệu Media Kit 2026</button>
             </div>
 
             <!-- Input area -->
-            <form id="chatbot-form" class="p-3 border-t border-white/10 bg-white flex items-center gap-2">
-                <input type="text" id="chatbot-input" placeholder="Nhập tin nhắn của bạn..." class="flex-1 text-xs border border-gray-300 text-slate-900 font-black rounded-full px-4 py-2.5 focus:outline-none focus:border-brand-blue transition">
-                <button type="submit" class="bg-brand-blue hover:bg-blue-700 text-white w-9 h-9 rounded-full flex items-center justify-center transition shadow-md flex-shrink-0" aria-label="Gửi">
-                    <i class="fa-solid fa-paper-plane text-sm"></i>
+            <form id="chatbot-form" class="p-3 border-t border-gray-150 dark:border-slate-800 bg-white/95 dark:bg-[#161B26]/95 flex items-center gap-2">
+                <input type="text" id="chatbot-input" placeholder="Nhập tin nhắn của bạn..." class="flex-1 text-xs border border-gray-250 dark:border-slate-800 bg-slate-50 dark:bg-[#1E2530] text-slate-800 dark:text-gray-100 rounded-full px-4 py-2.5 focus:outline-none focus:border-brand-blue dark:focus:border-brand-blue transition font-medium">
+                <button type="submit" class="bg-gradient-to-r from-[#A80000] to-brand-blue hover:opacity-90 text-white w-9 h-9 rounded-full flex items-center justify-center transition shadow-md hover:shadow-lg flex-shrink-0" aria-label="Gửi">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
                 </button>
             </form>
         </div>
 
-        <!-- Chat Trigger Button (Avatar - Scaled appropriately for mobile vs desktop) -->
-        <button id="chatbot-trigger" class="relative w-10 h-10 sm:w-14 md:w-16 lg:w-20 lg:h-20 rounded-full shadow-[0_10px_30px_rgba(10, 92, 255,0.3)] border md:border-4 border-white bg-white hover:scale-105 transition-all duration-300 flex items-center justify-center chatbot-pulse z-10 overflow-hidden" aria-label="Open Chat">
-            <img src="images/laodong_assistant_avatar.png" alt="Consultant Avatar" class="w-full h-full object-cover">
-            <!-- Online status badge -->
-            <span class="absolute bottom-0 right-0 w-2 h-2 md:w-3.5 md:h-3.5 bg-green-500 border border-white rounded-full"></span>
+        <!-- Chat Trigger Button (Elegant Floating Circle - Glass style with brand gradient glow) -->
+        <button id="chatbot-trigger" class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-[#A80000] via-[#BE1E2D] to-brand-blue text-white shadow-[0_8px_30px_rgba(168,0,0,0.25)] dark:shadow-[0_8px_30px_rgba(10,92,255,0.3)] border-2 border-white dark:border-white/10 hover:scale-105 transition-all duration-300 flex items-center justify-center chatbot-pulse z-10 group" aria-label="Open Chat">
+            <span class="absolute inset-0.5 rounded-full bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <!-- Default Speech bubbles icon -->
+            <i id="chatbot-trigger-icon" class="fa-solid fa-comments text-2xl transition duration-300 group-hover:rotate-6"></i>
+            
+            <!-- Online status indicator -->
+            <span class="absolute top-0.5 right-0.5 w-3.5 h-3.5 bg-green-500 border-2 border-white dark:border-[#0B0F19] rounded-full shadow-sm"></span>
         </button>
     </div>
 </body>
