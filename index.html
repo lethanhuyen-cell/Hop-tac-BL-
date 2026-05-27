@@ -142,6 +142,19 @@
         .animate-fade-in {
             animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
+
+        /* ===== PILLAR SHOWCASE STYLES ===== */
+        .pillar-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pillar-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.12);
+            z-index: 2;
+        }
+        .dark .pillar-card:hover {
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.4);
+        }
     </style>
 </head>
 <body class="font-sans text-[#333333] dark:text-gray-200 antialiased bg-[#F9FAFB] dark:bg-[#0B0F19] transition-colors duration-300">
@@ -468,229 +481,286 @@
                 </div>
             </div>
 
-            <!-- DESKTOP SHOWCASE: Show all 9 cards grouped in 3 columns (lg:grid, hidden on mobile) -->
-            <div class="hidden lg:grid grid-cols-3 gap-5 mb-6">
-                
-                <!-- Column 1: Di sản & Uy tín -->
-                <div class="flex flex-col gap-4">
-                    <div class="flex items-center gap-2 border-l-4 border-[#A80000] pl-3 pb-1 mb-1">
-                        <h4 class="font-serif font-black text-[#A80000] dark:text-red-500 text-sm tracking-wider uppercase">1. DI SẢN & UY TÍN</h4>
-                    </div>
-                    <!-- Card 1.1 -->
-                    <div class="group bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-4 rounded-2xl border border-slate-200/85 dark:border-white/5 shadow-[0_4px_15px_rgba(0,0,0,0.01)] hover:shadow-[0_12px_35px_-5px_rgba(168,0,0,0.08)] dark:hover:shadow-[0_12px_35px_-5px_rgba(168,0,0,0.18)] hover:border-[#A80000]/20 dark:hover:border-[#A80000]/25 border-t-[3px] border-t-[#A80000]/70 transition-all duration-300 flex flex-col justify-between h-full transform hover:-translate-y-1">
-                        <div>
-                            <div class="w-8.5 h-8.5 bg-[#A80000]/5 text-[#A80000] dark:text-red-400 dark:bg-[#A80000]/10 rounded-xl flex items-center justify-center text-base mb-3 group-hover:bg-[#A80000] group-hover:text-white transition-all duration-300 shadow-inner"><i class="fa-solid fa-newspaper text-xs"></i></div>
-                            <h5 class="font-black text-slate-900 dark:text-white text-sm mb-1 group-hover:text-[#A80000] transition-colors duration-300">Tiên phong Báo in (1929)</h5>
-                            <p class="text-slate-600 dark:text-gray-300 text-[11px] leading-relaxed">Xuất bản số đầu tiên ngày 14.8.1929, là tờ báo có tuổi đời lâu nhất trong nền Báo chí Cách mạng Việt Nam.</p>
-                        </div>
-                        <a href="https://laodong.vn/lao-dong-cuoi-tuan/bao-lao-dong-vung-vang-so-1-khat-vong-100-nam-1299644.ldo" target="_blank" class="text-[#A80000] dark:text-red-400 font-bold text-[11px] hover:underline inline-flex items-center gap-1 mt-2.5">Xem bài viết <i class="fa-solid fa-arrow-right text-[9px]"></i></a>
-                    </div>
-                    <!-- Card 1.2 -->
-                    <div class="group bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-4 rounded-2xl border border-slate-200/85 dark:border-white/5 shadow-[0_4px_15px_rgba(0,0,0,0.01)] hover:shadow-[0_12px_35px_-5px_rgba(168,0,0,0.08)] dark:hover:shadow-[0_12px_35px_-5px_rgba(168,0,0,0.18)] hover:border-[#A80000]/20 dark:hover:border-[#A80000]/25 border-t-[3px] border-t-[#A80000]/70 transition-all duration-300 flex flex-col justify-between h-full transform hover:-translate-y-1">
-                        <div>
-                            <div class="w-8.5 h-8.5 bg-[#A80000]/5 text-[#A80000] dark:text-red-400 dark:bg-[#A80000]/10 rounded-xl flex items-center justify-center text-base mb-3 group-hover:bg-[#A80000] group-hover:text-white transition-all duration-300 shadow-inner"><i class="fa-solid fa-laptop-code text-xs"></i></div>
-                            <h5 class="font-black text-slate-900 dark:text-white text-sm mb-1 group-hover:text-[#A80000] transition-colors duration-300">Tiên phong Báo số (1999)</h5>
-                            <p class="text-slate-600 dark:text-gray-300 text-[11px] leading-relaxed">Báo Lao Động Điện tử ra đời ngày 19.5.1999, đặt cột mốc lịch sử là một trong những tờ báo điện tử đầu tiên tại Việt Nam.</p>
-                        </div>
-                        <a href="https://laodong.vn/lao-dong-cuoi-tuan/nhung-dau-moc-25-nam-lao-dong-dien-tu-1341032.ldo" target="_blank" class="text-[#A80000] dark:text-red-400 font-bold text-[11px] hover:underline inline-flex items-center gap-1 mt-2.5">Xem bài viết <i class="fa-solid fa-arrow-right text-[9px]"></i></a>
-                    </div>
-                    <!-- Card 1.3 -->
-                    <div class="group bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-4 rounded-2xl border border-slate-200/85 dark:border-white/5 shadow-[0_4px_15px_rgba(0,0,0,0.01)] hover:shadow-[0_12px_35px_-5px_rgba(168,0,0,0.08)] dark:hover:shadow-[0_12px_35px_-5px_rgba(168,0,0,0.18)] hover:border-[#A80000]/20 dark:hover:border-[#A80000]/25 border-t-[3px] border-t-[#A80000]/70 transition-all duration-300 flex flex-col justify-between h-full transform hover:-translate-y-1">
-                        <div>
-                            <div class="w-8.5 h-8.5 bg-[#A80000]/5 text-[#A80000] dark:text-red-400 dark:bg-[#A80000]/10 rounded-xl flex items-center justify-center text-base mb-3 group-hover:bg-[#A80000] group-hover:text-white transition-all duration-300 shadow-inner"><i class="fa-solid fa-globe text-xs"></i></div>
-                            <h5 class="font-black text-slate-900 dark:text-white text-sm mb-1 group-hover:text-[#A80000] transition-colors duration-300">Tầm vóc Quốc tế</h5>
-                            <p class="text-slate-600 dark:text-gray-300 text-[11px] leading-relaxed">Được vinh danh vào Top 250 tờ báo nổi tiếng Thế giới tại Triển lãm báo chí quốc tế Paris danh giá năm 1995.</p>
-                        </div>
-                        <a href="https://laodong.vn/infographic/nhung-dau-moc-quan-trong-cua-bao-lao-dong-qua-93-nam-lich-su-1080017.ldo" target="_blank" class="text-[#A80000] dark:text-red-400 font-bold text-[11px] hover:underline inline-flex items-center gap-1 mt-2.5">Xem đồ họa <i class="fa-solid fa-arrow-right text-[9px]"></i></a>
-                    </div>
+            <!-- REDESIGNED: Three Pillars - Premium Horizontal Showcase -->
+            <div class="mt-8" id="pillar-showcase">
+
+                <!-- Section Divider -->
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 dark:via-white/10 to-transparent"></div>
+                    <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-gray-500">3 Trụ cột Sức mạnh Cạnh tranh</span>
+                    <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 dark:via-white/10 to-transparent"></div>
                 </div>
 
-                <!-- Column 2: Độc giả & Tầm ảnh hưởng -->
-                <div class="flex flex-col gap-4">
-                    <div class="flex items-center gap-2 border-l-4 border-amber-500 pl-3 pb-1 mb-1">
-                        <h4 class="font-serif font-black text-amber-600 dark:text-amber-500 text-sm tracking-wider uppercase">2. ĐỘC GIẢ</h4>
-                    </div>
-                    <!-- Card 2.1: Giới tính -->
-                    <div class="group bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-4 rounded-2xl border border-slate-200/85 dark:border-white/5 shadow-[0_4px_15px_rgba(0,0,0,0.01)] hover:shadow-[0_12px_35px_-5px_rgba(245,158,11,0.08)] dark:hover:shadow-[0_12px_35px_-5px_rgba(245,158,11,0.18)] hover:border-amber-500/20 dark:hover:border-amber-500/25 border-t-[3px] border-t-amber-500/70 transition-all duration-300 flex flex-col justify-between h-full transform hover:-translate-y-1">
-                        <div>
-                            <div class="w-8.5 h-8.5 bg-amber-500/5 text-amber-600 dark:text-amber-400 dark:bg-amber-500/10 rounded-xl flex items-center justify-center text-lg mb-3 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300 shadow-inner"><i class="fa-solid fa-venus-mars text-xs"></i></div>
-                            <h5 class="font-black text-slate-900 dark:text-white text-sm mb-1 group-hover:text-amber-600 transition-colors duration-300">Giới tính độc giả</h5>
-                            <p class="text-slate-600 dark:text-gray-300 text-[11px] leading-relaxed">
-                                <strong class="text-amber-650 dark:text-amber-400 font-bold">58% Nam giới:</strong> Tri thức, quản lý, nhà đầu tư.<br>
-                                <strong class="text-purple-600 dark:text-purple-400 font-bold">42% Nữ giới:</strong> Phụ nữ hiện đại, chủ động chi tiêu.
+                <!-- Pillar Cards Grid: 3 columns on desktop, stacked on mobile -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0 rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-2xl" id="pillar-cards-grid">
+
+                    <!-- ===== PILLAR 1: DI SAN & UY TIN ===== -->
+                    <div class="pillar-card relative group cursor-pointer overflow-hidden transition-all duration-500 border-r border-gray-200 dark:border-white/10"
+                         id="pillar-card-1"
+                         onclick="expandPillar(1)"
+                         style="background: linear-gradient(135deg, #fff 0%, #fdf8f4 100%);">
+
+                        <!-- Dark mode bg via class manipulation -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-white to-amber-50/30 dark:from-[#161B26] dark:to-[#1a1210] pointer-events-none"></div>
+
+                        <!-- Large watermark number -->
+                        <div class="absolute top-3 right-4 text-[80px] font-black leading-none text-amber-500/10 dark:text-amber-500/8 select-none pointer-events-none font-serif" aria-hidden="true">I</div>
+
+                        <!-- Top accent bar -->
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600"></div>
+
+                        <!-- Card Content -->
+                        <div class="relative z-10 p-6 md:p-5 lg:p-6">
+
+                            <!-- Pillar label -->
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="w-7 h-7 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400 text-xs">
+                                    <i class="fa-solid fa-award"></i>
+                                </span>
+                                <span class="text-[9px] font-black uppercase tracking-[0.15em] text-amber-600 dark:text-amber-400">Trụ cột 01</span>
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="font-serif font-black text-slate-800 dark:text-white text-lg md:text-base lg:text-xl leading-tight mb-2 tracking-wide uppercase">
+                                Di sản &amp; Uy tín
+                            </h3>
+                            <p class="text-slate-500 dark:text-gray-400 text-xs leading-relaxed mb-5">
+                                Bảo chứng thương hiệu từ tờ báo Cách mạng lâu đời nhất Việt Nam — <strong class="text-slate-700 dark:text-gray-200">97 năm</strong> tiếng nói uy tín.
                             </p>
+
+                            <!-- 3 Key Metrics in a compact row -->
+                            <div class="space-y-2.5 mb-5">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-600 dark:text-amber-400 flex-shrink-0 text-xs">
+                                        <i class="fa-solid fa-newspaper"></i>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white">Báo in 1929</div>
+                                        <div class="text-[9.5px] text-slate-500 dark:text-gray-500 truncate">Tờ báo CM lâu đời nhất VN</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-600 dark:text-amber-400 flex-shrink-0 text-xs">
+                                        <i class="fa-solid fa-laptop-code"></i>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white">Báo số 1999</div>
+                                        <div class="text-[9.5px] text-slate-500 dark:text-gray-500 truncate">Tiên phong báo điện tử VN</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-600 dark:text-amber-400 flex-shrink-0 text-xs">
+                                        <i class="fa-solid fa-globe"></i>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white">Top 250 Thế giới</div>
+                                        <div class="text-[9.5px] text-slate-500 dark:text-gray-500 truncate">Paris Press Exhibition 1995</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Big Stat Highlight -->
+                            <div class="rounded-xl bg-gradient-to-br from-amber-500/10 to-amber-600/5 border border-amber-500/20 p-3 flex items-center gap-3 mb-5">
+                                <div class="text-3xl font-black text-amber-600 dark:text-amber-400 leading-none">97</div>
+                                <div>
+                                    <div class="text-[10px] font-bold text-slate-700 dark:text-gray-300 uppercase tracking-wider">Năm Thành lập</div>
+                                    <div class="text-[9px] text-slate-400 dark:text-gray-500">1929 — Nay</div>
+                                </div>
+                            </div>
+
+                            <!-- Expand CTA -->
+                            <a href="https://laodong.vn/infographic/nhung-dau-moc-quan-trong-cua-bao-lao-dong-qua-93-nam-lich-su-1080017.ldo" target="_blank"
+                               class="inline-flex items-center gap-1.5 text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 font-extrabold text-[10.5px] transition-colors group/link">
+                                Lịch sử hình thành
+                                <i class="fa-solid fa-arrow-right text-[9px] group-hover/link:translate-x-0.5 transition-transform"></i>
+                            </a>
                         </div>
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase bg-amber-500/10 text-amber-650 dark:text-amber-450 border border-amber-500/20 mt-2.5 w-fit">Báo cáo Audience 2026</span>
+
+                        <!-- Bottom gradient accent on hover -->
+                        <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                     </div>
-                    <!-- Card 2.2: Độ tuổi mua sắm vàng -->
-                    <div class="group bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-4 rounded-2xl border border-slate-200/85 dark:border-white/5 shadow-[0_4px_15px_rgba(0,0,0,0.01)] hover:shadow-[0_12px_35px_-5px_rgba(245,158,11,0.08)] dark:hover:shadow-[0_12px_35px_-5px_rgba(245,158,11,0.18)] hover:border-amber-500/20 dark:hover:border-amber-500/25 border-t-[3px] border-t-amber-500/70 transition-all duration-300 flex flex-col justify-between h-full transform hover:-translate-y-1">
-                        <div>
-                            <div class="w-8.5 h-8.5 bg-amber-500/5 text-amber-600 dark:text-amber-400 dark:bg-amber-500/10 rounded-xl flex items-center justify-center text-lg mb-3 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300 shadow-inner"><i class="fa-solid fa-calendar-check text-xs"></i></div>
-                            <h5 class="font-black text-slate-900 dark:text-white text-sm mb-1 group-hover:text-amber-600 transition-colors duration-300">Độ tuổi mua sắm vàng</h5>
-                            <p class="text-slate-600 dark:text-gray-300 text-[11px] leading-relaxed">
-                                <strong class="text-amber-655 dark:text-amber-400 font-bold">76% Độc giả từ 25 – 54 tuổi:</strong> Nhóm tuổi chín muồi về sự nghiệp, có tích lũy tài sản và sức mua mạnh nhất thị trường.
+
+                    <!-- ===== PILLAR 2: DOC GIA ===== -->
+                    <div class="pillar-card relative group cursor-pointer overflow-hidden transition-all duration-500 border-r border-gray-200 dark:border-white/10"
+                         id="pillar-card-2"
+                         onclick="expandPillar(2)">
+
+                        <div class="absolute inset-0 bg-gradient-to-br from-white to-red-50/20 dark:from-[#161B26] dark:to-[#120f18] pointer-events-none"></div>
+
+                        <!-- Large watermark number -->
+                        <div class="absolute top-3 right-4 text-[80px] font-black leading-none text-[#A80000]/8 dark:text-brand-blue/8 select-none pointer-events-none font-serif" aria-hidden="true">II</div>
+
+                        <!-- Top accent bar -->
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#A80000] via-red-500 to-[#A80000] dark:from-brand-blue dark:via-blue-400 dark:to-brand-blue"></div>
+
+                        <!-- Card Content -->
+                        <div class="relative z-10 p-6 md:p-5 lg:p-6">
+
+                            <!-- Pillar label -->
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="w-7 h-7 rounded-lg bg-[#A80000]/10 dark:bg-brand-blue/15 border border-[#A80000]/20 dark:border-brand-blue/25 flex items-center justify-center text-[#A80000] dark:text-brand-blue text-xs">
+                                    <i class="fa-solid fa-users"></i>
+                                </span>
+                                <span class="text-[9px] font-black uppercase tracking-[0.15em] text-[#A80000] dark:text-brand-blue">Trụ cột 02</span>
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="font-serif font-black text-slate-800 dark:text-white text-lg md:text-base lg:text-xl leading-tight mb-2 tracking-wide uppercase">
+                                Độc giả
+                            </h3>
+                            <p class="text-slate-500 dark:text-gray-400 text-xs leading-relaxed mb-5">
+                                Hơn <strong class="text-slate-700 dark:text-gray-200">700M+ độc giả/năm</strong> thuộc nhóm nhân khẩu học có sức mua cao nhất thị trường.
                             </p>
+
+                            <!-- Demographics compact -->
+                            <div class="space-y-2.5 mb-5">
+                                <!-- Gender bar -->
+                                <div>
+                                    <div class="flex justify-between text-[9.5px] font-bold mb-1">
+                                        <span class="text-slate-600 dark:text-gray-400"><i class="fa-solid fa-mars mr-1 text-[#A80000] dark:text-brand-blue"></i>Nam 58%</span>
+                                        <span class="text-purple-600 dark:text-purple-400"><i class="fa-solid fa-venus mr-1"></i>Nữ 42%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full overflow-hidden flex bg-gray-200 dark:bg-white/10">
+                                        <div class="bg-[#A80000] dark:bg-brand-blue h-full rounded-l-full transition-all duration-1000" style="width:58%"></div>
+                                        <div class="bg-purple-400 h-full rounded-r-full" style="width:42%"></div>
+                                    </div>
+                                </div>
+                                <!-- Age highlight -->
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-[#A80000]/10 dark:bg-brand-blue/15 flex items-center justify-center text-[#A80000] dark:text-brand-blue flex-shrink-0 text-xs">
+                                        <i class="fa-solid fa-calendar-check"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white">Nhóm 25–54 tuổi</div>
+                                        <div class="text-[9.5px] text-slate-500 dark:text-gray-500">Độ tuổi sức mua cao nhất</div>
+                                    </div>
+                                </div>
+                                <!-- Engagement -->
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-[#A80000]/10 dark:bg-brand-blue/15 flex items-center justify-center text-[#A80000] dark:text-brand-blue flex-shrink-0 text-xs">
+                                        <i class="fa-solid fa-circle-nodes"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white">65% trực tiếp</div>
+                                        <div class="text-[9.5px] text-slate-500 dark:text-gray-500">Độc giả trung thành cốt lõi</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Big Stat Highlight -->
+                            <div class="rounded-xl bg-gradient-to-br from-[#A80000]/8 to-[#A80000]/3 dark:from-brand-blue/10 dark:to-brand-blue/3 border border-[#A80000]/15 dark:border-brand-blue/20 p-3 flex items-center gap-3 mb-5">
+                                <div class="text-3xl font-black text-[#A80000] dark:text-brand-blue leading-none">76%</div>
+                                <div>
+                                    <div class="text-[10px] font-bold text-slate-700 dark:text-gray-300 uppercase tracking-wider">Nhóm 25–54T</div>
+                                    <div class="text-[9px] text-slate-400 dark:text-gray-500">Báo cáo Audience 2026</div>
+                                </div>
+                            </div>
+
+                            <!-- CTA -->
+                            <span class="inline-flex items-center gap-1.5 text-[#A80000] dark:text-brand-blue font-extrabold text-[10.5px] cursor-default">
+                                Chân dung độc giả toàn diện
+                                <i class="fa-solid fa-chart-bar text-[9px]"></i>
+                            </span>
                         </div>
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase bg-amber-500/10 text-amber-650 dark:text-amber-455 border border-amber-500/20 mt-2.5 w-fit">Sức mua mạnh mẽ</span>
+
+                        <!-- Bottom hover accent -->
+                        <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#A80000] via-red-400 to-[#A80000] dark:from-brand-blue dark:via-blue-400 dark:to-brand-blue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                     </div>
-                    <!-- Card 2.3: Chất lượng tương tác -->
-                    <div class="group bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-4 rounded-2xl border border-slate-200/85 dark:border-white/5 shadow-[0_4px_15px_rgba(0,0,0,0.01)] hover:shadow-[0_12px_35px_-5px_rgba(245,158,11,0.08)] dark:hover:shadow-[0_12px_35px_-5px_rgba(245,158,11,0.18)] hover:border-amber-500/20 dark:hover:border-amber-500/25 border-t-[3px] border-t-amber-500/70 transition-all duration-300 flex flex-col justify-between h-full transform hover:-translate-y-1">
-                        <div>
-                            <div class="w-8.5 h-8.5 bg-amber-500/5 text-amber-600 dark:text-amber-400 dark:bg-amber-500/10 rounded-xl flex items-center justify-center text-lg mb-3 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300 shadow-inner"><i class="fa-solid fa-chart-line text-xs"></i></div>
-                            <h5 class="font-black text-slate-900 dark:text-white text-sm mb-1 group-hover:text-amber-600 transition-colors duration-300">Chất lượng tương tác</h5>
-                            <p class="text-slate-600 dark:text-gray-300 text-[11px] leading-relaxed">
-                                <strong class="text-amber-655 dark:text-amber-400 font-bold">65% Độc giả Cốt lõi:</strong> Truy cập trực tiếp, tương tác sâu.<br>
-                                <strong class="text-slate-800 dark:text-white font-bold">35% Độc giả Đại chúng:</strong> Tiếp cận qua Google Search, MXH, Chat.
+
+                    <!-- ===== PILLAR 3: HA TANG SO & KET NOI ===== -->
+                    <div class="pillar-card relative group cursor-pointer overflow-hidden transition-all duration-500"
+                         id="pillar-card-3"
+                         onclick="expandPillar(3)">
+
+                        <div class="absolute inset-0 bg-gradient-to-br from-white to-cyan-50/20 dark:from-[#161B26] dark:to-[#0f1518] pointer-events-none"></div>
+
+                        <!-- Large watermark number -->
+                        <div class="absolute top-3 right-4 text-[80px] font-black leading-none text-brand-blue/8 select-none pointer-events-none font-serif" aria-hidden="true">III</div>
+
+                        <!-- Top accent bar -->
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-blue via-cyan-400 to-brand-blue"></div>
+
+                        <!-- Card Content -->
+                        <div class="relative z-10 p-6 md:p-5 lg:p-6">
+
+                            <!-- Pillar label -->
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="w-7 h-7 rounded-lg bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-xs">
+                                    <i class="fa-solid fa-network-wired"></i>
+                                </span>
+                                <span class="text-[9px] font-black uppercase tracking-[0.15em] text-brand-blue">Trụ cột 03</span>
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="font-serif font-black text-slate-800 dark:text-white text-lg md:text-base lg:text-xl leading-tight mb-2 tracking-wide uppercase">
+                                Hạ tầng Số &amp; Kết nối
+                            </h3>
+                            <p class="text-slate-500 dark:text-gray-400 text-xs leading-relaxed mb-5">
+                                Hệ sinh thái đa ngôn ngữ <strong class="text-slate-700 dark:text-gray-200">8 ngôn ngữ</strong> và công nghệ trường quay ảo 3D AR/VR tiên phong.
                             </p>
-                        </div>
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase bg-amber-500/10 text-amber-650 dark:text-amber-455 border border-amber-500/20 mt-2.5 w-fit">Tương tác đa kênh</span>
-                    </div>
-                </div>
 
-                <!-- Column 3: Hạ tầng Số & Kết nối -->
-                <div class="flex flex-col gap-4">
-                    <div class="flex items-center gap-2 border-l-4 border-brand-blue pl-3 pb-1 mb-1">
-                        <h4 class="font-serif font-black text-brand-blue dark:text-blue-500 text-sm tracking-wider uppercase">3. HẠ TẦNG SỐ & KẾT NỐI</h4>
-                    </div>
-                    <!-- Card 3.1 -->
-                    <div class="group bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-4 rounded-2xl border border-slate-200/85 dark:border-white/5 shadow-[0_4px_15px_rgba(0,0,0,0.01)] hover:shadow-[0_12px_35px_-5px_rgba(10,92,255,0.08)] dark:hover:shadow-[0_12px_35px_-5px_rgba(10,92,255,0.18)] hover:border-brand-blue/20 dark:hover:border-brand-blue/25 border-t-[3px] border-t-brand-blue/70 transition-all duration-300 flex flex-col justify-between h-full transform hover:-translate-y-1">
-                        <div>
-                            <div class="w-8.5 h-8.5 bg-brand-blue/5 text-brand-blue dark:text-blue-400 dark:bg-brand-blue/10 rounded-xl flex items-center justify-center text-lg mb-3 group-hover:bg-brand-blue group-hover:text-white transition-all duration-300 shadow-inner"><i class="fa-solid fa-language text-xs"></i></div>
-                            <h5 class="font-black text-slate-900 dark:text-white text-sm mb-1 group-hover:text-brand-blue transition-colors duration-300">Hạ tầng 8 Ngôn ngữ</h5>
-                            <p class="text-slate-655 dark:text-gray-300 text-[11px] leading-relaxed">Đa dạng hóa khả năng truyền thông đối ngoại bằng các cổng thông tin ngôn ngữ Anh, Pháp, Tây Ban Nha, Hàn, Nhật, Nga, Trung.</p>
-                        </div>
-                        <span class="text-slate-400 dark:text-gray-500 text-[10px] font-semibold tracking-wider uppercase mt-3">GLOBAL REACH PORTAL</span>
-                    </div>
-                    <!-- Card 3.2 -->
-                    <div class="group bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-4 rounded-2xl border border-slate-200/85 dark:border-white/5 shadow-[0_4px_15px_rgba(0,0,0,0.01)] hover:shadow-[0_12px_35px_-5px_rgba(10,92,255,0.08)] dark:hover:shadow-[0_12px_35px_-5px_rgba(10,92,255,0.18)] hover:border-brand-blue/20 dark:hover:border-brand-blue/25 border-t-[3px] border-t-brand-blue/70 transition-all duration-300 flex flex-col justify-between h-full transform hover:-translate-y-1">
-                        <div>
-                            <div class="w-8.5 h-8.5 bg-brand-blue/5 text-brand-blue dark:text-blue-400 dark:bg-brand-blue/10 rounded-xl flex items-center justify-center text-lg mb-3 group-hover:bg-brand-blue group-hover:text-white transition-all duration-300 shadow-inner"><i class="fa-solid fa-video text-xs"></i></div>
-                            <h5 class="font-black text-slate-900 dark:text-white text-sm mb-1 group-hover:text-brand-blue transition-colors duration-300">Trường quay Ảo AR/VR</h5>
-                            <p class="text-slate-655 dark:text-gray-300 text-[11px] leading-relaxed">Trung tâm đa phương tiện hiện đại bậc nhất, ứng dụng công nghệ trường quay ảo 3D thời gian thực phục vụ các talkshow tài trợ.</p>
-                        </div>
-                        <span class="text-slate-400 dark:text-gray-500 text-[10px] font-semibold tracking-wider uppercase mt-3">LAO ĐỘNG TV STUDIOS</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MOBILE SHOWCASE: Keep the luxurious compact Tab Switcher (block lg:hidden) -->
-            <div class="block lg:hidden mb-10">
-                <!-- Instruction Header -->
-                <div class="flex items-center justify-between mb-3.5 flex-wrap gap-2 px-1">
-                    <span class="text-[11px] font-bold text-slate-500 dark:text-gray-400 uppercase tracking-widest flex items-center gap-1.5">
-                        <span class="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></span>
-                        3 Trụ cột Uy tín
-                    </span>
-                    <span class="text-[10px] text-brand-blue font-bold flex items-center gap-1 bg-brand-blue/10 border border-brand-blue/20 px-2.5 py-1 rounded-full animate-bounce">
-                        <i class="fa-solid fa-hand-pointer text-[10px]"></i> Click chọn mục
-                    </span>
-                </div>
-
-                <!-- Tab Buttons container -->
-                <div class="bg-slate-100 dark:bg-[#161B26]/50 p-1.5 rounded-xl border border-gray-200 dark:border-white/10 flex flex-wrap gap-1 mb-8 shadow-inner">
-                    <button onclick="switchPillarTab(1, true)" id="pillar-tab-1" class="pillar-tab flex-1 min-w-[140px] py-3.5 px-4 text-center rounded-lg text-xs md:text-sm font-bold transition duration-300 bg-[#A80000] text-white shadow-md flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-clock-rotate-left text-sm"></i>
-                        <span>1. DI SẢN</span>
-                    </button>
-                    <button onclick="switchPillarTab(2, true)" id="pillar-tab-2" class="pillar-tab flex-1 min-w-[140px] py-3.5 px-4 text-center rounded-lg text-xs md:text-sm font-bold transition duration-300 text-slate-650 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/50 dark:hover:bg-white/5 flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-users text-sm"></i>
-                        <span>2. ĐỘC GIẢ</span>
-                    </button>
-                    <button onclick="switchPillarTab(3, true)" id="pillar-tab-3" class="pillar-tab flex-1 min-w-[140px] py-3.5 px-4 text-center rounded-lg text-xs md:text-sm font-bold transition duration-300 text-slate-650 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/50 dark:hover:bg-white/5 flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-network-wired text-sm"></i>
-                        <span>3. HẠ TẦNG</span>
-                    </button>
-                </div>
-
-                <!-- Tab Contents -->
-                <div class="space-y-6">
-                    <!-- Panel 1: Heritage -->
-                    <div id="pillar-panel-1" class="pillar-panel space-y-6 block transition duration-500">
-                        <!-- Card 1.1 -->
-                        <div class="bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-5 rounded-2xl border border-slate-200/85 dark:border-white/5 border-t-[3px] border-t-[#A80000]/70 flex flex-col justify-between group text-slate-800 dark:text-white">
-                            <div>
-                                <div class="w-10 h-10 bg-[#A80000]/5 text-[#A80000] dark:text-red-400 dark:bg-[#A80000]/10 rounded-xl flex items-center justify-center text-lg mb-4"><i class="fa-solid fa-newspaper"></i></div>
-                                <h4 class="font-extrabold text-slate-855 dark:text-white text-base mb-2">Tiên phong Báo in (1929)</h4>
-                                <p class="text-slate-500 dark:text-gray-300 text-xs leading-relaxed">Xuất bản số đầu tiên ngày 14.8.1929, là tờ báo có tuổi đời lâu nhất trong nền Báo chí Cách mạng Việt Nam.</p>
+                            <!-- 3 Key Items -->
+                            <div class="space-y-2.5 mb-5">
+                                <!-- Language badges -->
+                                <div class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-blue/10 flex items-center justify-center text-brand-blue flex-shrink-0 text-xs mt-0.5">
+                                        <i class="fa-solid fa-language"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white mb-1">Hạ tầng 8 Ngôn ngữ</div>
+                                        <div class="flex flex-wrap gap-1">
+                                            <span class="text-[8.5px] font-bold px-1.5 py-0.5 rounded bg-brand-blue/10 dark:bg-white/5 border border-brand-blue/20 dark:border-white/10 text-brand-blue dark:text-gray-300">🇻🇳🇬🇧🇫🇷🇪🇸🇷🇺🇨🇳🇯🇵🇰🇷</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-blue/10 flex items-center justify-center text-brand-blue flex-shrink-0 text-xs">
+                                        <i class="fa-solid fa-video"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white">Trường quay 3D AR/VR</div>
+                                        <div class="text-[9.5px] text-slate-500 dark:text-gray-500">Real-time rendering studio</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-blue/10 flex items-center justify-center text-brand-blue flex-shrink-0 text-xs">
+                                        <i class="fa-solid fa-mobile-screen"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white">Đa nền tảng số</div>
+                                        <div class="text-[9.5px] text-slate-500 dark:text-gray-500">Web, App, YouTube, Facebook, TikTok</div>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="https://laodong.vn/lao-dong-cuoi-tuan/bao-lao-dong-vung-vang-so-1-khat-vong-100-nam-1299644.ldo" target="_blank" class="text-[#A80000] dark:text-red-400 font-bold text-xs hover:underline inline-flex items-center gap-1 mt-4">Xem bài viết <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
-                        </div>
-                        <!-- Card 1.2 -->
-                        <div class="bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-5 rounded-2xl border border-slate-200/85 dark:border-white/5 border-t-[3px] border-t-[#A80000]/70 flex flex-col justify-between group text-slate-800 dark:text-white">
-                            <div>
-                                <div class="w-10 h-10 bg-[#A80000]/5 text-[#A80000] dark:text-red-455 dark:bg-[#A80000]/10 rounded-xl flex items-center justify-center text-lg mb-4"><i class="fa-solid fa-laptop-code"></i></div>
-                                <h4 class="font-extrabold text-slate-855 dark:text-white text-base mb-2">Tiên phong Báo số (1999)</h4>
-                                <p class="text-slate-500 dark:text-gray-300 text-xs leading-relaxed">Báo Lao Động Điện tử ra đời ngày 19.5.1999, đặt cột mốc lịch sử là một trong những tờ báo điện tử đầu tiên tại Việt Nam.</p>
+
+                            <!-- Big Stat Highlight -->
+                            <div class="rounded-xl bg-gradient-to-br from-brand-blue/8 to-brand-blue/3 border border-brand-blue/15 p-3 flex items-center gap-3 mb-5">
+                                <div class="text-3xl font-black text-brand-blue leading-none">8</div>
+                                <div>
+                                    <div class="text-[10px] font-bold text-slate-700 dark:text-gray-300 uppercase tracking-wider">Ngôn ngữ Toàn cầu</div>
+                                    <div class="text-[9px] text-slate-400 dark:text-gray-500">Global Reach Portal</div>
+                                </div>
                             </div>
-                            <a href="https://laodong.vn/lao-dong-cuoi-tuan/nhung-dau-moc-25-nam-lao-dong-dien-tu-1341032.ldo" target="_blank" class="text-[#A80000] dark:text-red-400 font-bold text-xs hover:underline inline-flex items-center gap-1 mt-4">Xem bài viết <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+
+                            <!-- CTA -->
+                            <a href="https://laodong.vn/media" target="_blank"
+                               class="inline-flex items-center gap-1.5 text-brand-blue hover:text-blue-600 dark:hover:text-blue-300 font-extrabold text-[10.5px] transition-colors group/link">
+                                Khám phá nền tảng số
+                                <i class="fa-solid fa-arrow-right text-[9px] group-hover/link:translate-x-0.5 transition-transform"></i>
+                            </a>
                         </div>
-                        <!-- Card 1.3 -->
-                        <div class="bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-5 rounded-2xl border border-slate-200/85 dark:border-white/5 border-t-[3px] border-t-[#A80000]/70 flex flex-col justify-between group text-slate-800 dark:text-white">
-                            <div>
-                                <div class="w-10 h-10 bg-[#A80000]/5 text-[#A80000] dark:text-red-455 dark:bg-[#A80000]/10 rounded-xl flex items-center justify-center text-lg mb-4"><i class="fa-solid fa-globe"></i></div>
-                                <h4 class="font-extrabold text-slate-855 dark:text-white text-base mb-2">Tầm vóc Quốc tế</h4>
-                                <p class="text-slate-500 dark:text-gray-300 text-xs leading-relaxed">Được vinh danh vào Top 250 tờ báo nổi tiếng Thế giới tại Triển lãm báo chí quốc tế Paris danh giá năm 1995.</p>
-                            </div>
-                            <a href="https://laodong.vn/infographic/nhung-dau-moc-quan-trong-cua-bao-lao-dong-qua-93-nam-lich-su-1080017.ldo" target="_blank" class="text-[#A80000] dark:text-red-400 font-bold text-xs hover:underline inline-flex items-center gap-1 mt-4">Xem đồ họa <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
-                        </div>
+
+                        <!-- Bottom hover accent -->
+                        <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-brand-blue via-cyan-400 to-brand-blue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                     </div>
 
-                    <!-- Panel 2: Audience (Initially Hidden) -->
-                    <div id="pillar-panel-2" class="pillar-panel space-y-6 hidden transition duration-500">
-                        <!-- Card 2.1: Giới tính -->
-                        <div class="bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-5 rounded-2xl border border-slate-200/85 dark:border-white/5 border-t-[3px] border-t-amber-500/70 flex flex-col justify-between group text-slate-800 dark:text-white">
-                            <div>
-                                <div class="w-10 h-10 bg-amber-500/5 text-amber-600 dark:text-amber-400 dark:bg-amber-500/10 rounded-xl flex items-center justify-center text-lg mb-4"><i class="fa-solid fa-venus-mars"></i></div>
-                                <h4 class="font-extrabold text-slate-855 dark:text-white text-base mb-2">Giới tính độc giả</h4>
-                                <p class="text-slate-500 dark:text-gray-300 text-xs leading-relaxed"><strong>58% Nam giới:</strong> Tri thức, quản lý, nhà đầu tư.<br><strong>42% Nữ giới:</strong> Phụ nữ hiện đại, chủ động chi tiêu.</p>
-                            </div>
-                            <span class="text-slate-500 dark:text-gray-400 text-[10px] font-semibold tracking-wider uppercase mt-4">Báo cáo Audience 2026</span>
-                        </div>
-                        <!-- Card 2.2: Độ tuổi mua sắm vàng -->
-                        <div class="bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-5 rounded-2xl border border-slate-200/85 dark:border-white/5 border-t-[3px] border-t-amber-500/70 flex flex-col justify-between group text-slate-800 dark:text-white">
-                            <div>
-                                <div class="w-10 h-10 bg-amber-500/5 text-amber-600 dark:text-amber-455 dark:bg-amber-500/10 rounded-xl flex items-center justify-center text-lg mb-4"><i class="fa-solid fa-calendar-check"></i></div>
-                                <h4 class="font-extrabold text-slate-855 dark:text-white text-base mb-2">Độ tuổi mua sắm vàng</h4>
-                                <p class="text-slate-500 dark:text-gray-300 text-xs leading-relaxed"><strong>76% Độc giả từ 25 – 54 tuổi:</strong> Nhóm tuổi chín muồi về sự nghiệp, có tích lũy tài sản và sức mua mạnh mẽ nhất thị trường.</p>
-                            </div>
-                            <span class="text-slate-550 dark:text-gray-400 text-[10px] font-semibold tracking-wider uppercase mt-4">Sức mua mạnh mẽ</span>
-                        </div>
-                        <!-- Card 2.3: Chất lượng tương tác -->
-                        <div class="bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-5 rounded-2xl border border-slate-200/85 dark:border-white/5 border-t-[3px] border-t-amber-500/70 flex flex-col justify-between group text-slate-800 dark:text-white">
-                            <div>
-                                <div class="w-10 h-10 bg-amber-500/5 text-amber-600 dark:text-amber-455 dark:bg-amber-500/10 rounded-xl flex items-center justify-center text-lg mb-4"><i class="fa-solid fa-chart-line"></i></div>
-                                <h4 class="font-extrabold text-slate-855 dark:text-white text-base mb-2">Chất lượng tương tác</h4>
-                                <p class="text-slate-500 dark:text-gray-300 text-xs leading-relaxed"><strong>65% Độc giả Cốt lõi:</strong> Truy cập trực tiếp, tương tác sâu đặc biệt trên các chuyên mục Tài chính, Kinh tế, Thể thao, Xã hội, Du lịch.<br><strong>35% Độc giả Đại chúng:</strong> Tiếp cận liên tục qua Google Search, Mạng xã hội và các Nền tảng Chat – Đảm bảo độ phủ (Reach) cực đại cho chiến dịch.</p>
-                            </div>
-                            <span class="text-slate-550 dark:text-gray-400 text-[10px] font-semibold tracking-wider uppercase mt-4">Tương tác đa kênh</span>
-                        </div>
-                    </div>
+                </div><!-- end pillar-cards-grid -->
 
-                    <!-- Panel 3: Digital & CSR (Initially Hidden) -->
-                    <div id="pillar-panel-3" class="pillar-panel space-y-6 hidden transition duration-500">
-                        <!-- Card 3.1 -->
-                        <div class="bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-5 rounded-2xl border border-slate-200/85 dark:border-white/5 border-t-[3px] border-t-brand-blue/70 flex flex-col justify-between group text-slate-800 dark:text-white">
-                            <div>
-                                <div class="w-10 h-10 bg-brand-blue/5 text-brand-blue dark:text-blue-400 dark:bg-brand-blue/10 rounded-xl flex items-center justify-center text-lg mb-4"><i class="fa-solid fa-language"></i></div>
-                                <h4 class="font-extrabold text-slate-855 dark:text-white text-base mb-2">Hạ tầng 8 Ngôn ngữ</h4>
-                                <p class="text-slate-500 dark:text-gray-300 text-xs leading-relaxed">Đa dạng hóa khả năng truyền thông đối ngoại bằng các cổng thông tin ngôn ngữ Anh, Pháp, Tây Ban Nha, Hàn, Nhật, Nga, Trung.</p>
-                            </div>
-                            <span class="text-slate-400 dark:text-gray-500 text-[10px] font-semibold tracking-wider uppercase mt-4">GLOBAL REACH PORTAL</span>
-                        </div>
-                        <!-- Card 3.2 -->
-                        <div class="bg-gradient-to-b from-white to-slate-50/50 dark:from-[#161B26] dark:to-[#111622] p-5 rounded-2xl border border-slate-200/85 dark:border-white/5 border-t-[3px] border-t-brand-blue/70 flex flex-col justify-between group text-slate-800 dark:text-white">
-                            <div>
-                                <div class="w-10 h-10 bg-brand-blue/5 text-brand-blue dark:text-blue-400 dark:bg-brand-blue/10 rounded-xl flex items-center justify-center text-lg mb-4"><i class="fa-solid fa-video"></i></div>
-                                <h4 class="font-extrabold text-slate-855 dark:text-white text-base mb-2">Trường quay Ảo AR/VR</h4>
-                                <p class="text-slate-500 dark:text-gray-300 text-xs leading-relaxed">Trung tâm đa phương tiện hiện đại bậc nhất, ứng dụng công nghệ trường quay ảo 3D thời gian thực phục vụ các talkshow tài trợ.</p>
-                            </div>
-                            <span class="text-slate-400 dark:text-gray-500 text-[10px] font-semibold tracking-wider uppercase mt-4">LAO ĐỘNG TV STUDIOS</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div><!-- end pillar-showcase -->
+
         </div>
-    </section>
+</section>
+
 
     <!-- SECTION 5 – NHÓM SẢN PHẨM / DỊCH VỤ -->
     <section id="san-pham" class="py-8 md:py-10 bg-[#F9FAFB] dark:bg-[#0B0F19] text-slate-800 dark:text-white border-b border-gray-200 dark:border-white/10 transition-colors duration-300">
@@ -794,9 +864,18 @@
                     </div>
                 </div>
             </div>
+            <!-- Category Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-2.5 mb-8" id="product-filter-tabs">
+                <button class="product-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-transparent bg-[#A80000] dark:bg-brand-blue text-white shadow-sm transition-all duration-300 hover:scale-[1.02]" data-filter="all">Tất cả</button>
+                <button class="product-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-gray-200 dark:border-white/10 bg-white dark:bg-[#161B26] text-slate-700 dark:text-gray-300 hover:border-[#A80000] dark:hover:border-brand-blue hover:text-[#A80000] dark:hover:text-brand-blue transition-all duration-300 shadow-sm hover:scale-[1.02]" data-filter="banner">Quảng cáo Banner & MXH</button>
+                <button class="product-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-gray-200 dark:border-white/10 bg-white dark:bg-[#161B26] text-slate-700 dark:text-gray-300 hover:border-[#A80000] dark:hover:border-brand-blue hover:text-[#A80000] dark:hover:text-brand-blue transition-all duration-300 shadow-sm hover:scale-[1.02]" data-filter="pr">Bài viết & PR</button>
+                <button class="product-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-gray-200 dark:border-white/10 bg-white dark:bg-[#161B26] text-slate-700 dark:text-gray-300 hover:border-[#A80000] dark:hover:border-brand-blue hover:text-[#A80000] dark:hover:text-brand-blue transition-all duration-300 shadow-sm hover:scale-[1.02]" data-filter="video">Truyền hình & Video</button>
+                <button class="product-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-gray-200 dark:border-white/10 bg-white dark:bg-[#161B26] text-slate-700 dark:text-gray-300 hover:border-[#A80000] dark:hover:border-brand-blue hover:text-[#A80000] dark:hover:text-brand-blue transition-all duration-300 shadow-sm hover:scale-[1.02]" data-filter="event-print">Sự kiện & Báo in</button>
+            </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- SP 1: Sản phẩm Hiển thị -->
-                <div class="border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300">
+                <div class="product-card border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300" data-category="banner" style="transition: all 0.3s ease; opacity: 1; transform: scale(1);">
                     <div class="h-48 overflow-hidden bg-gray-100 relative">
                         <img src="images/quang_cao_banner_laodong.jpg" alt="Trang chủ Báo Lao Động Điện tử" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3 bg-brand-blue text-white text-[10px] font-bold px-2.5 py-1 rounded shadow-sm uppercase tracking-wide">Display Ads</div>
@@ -818,7 +897,7 @@
                 </div>
 
                 <!-- SP 2: Nội dung & Tài trợ -->
-                <div class="border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300">
+                <div class="product-card border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300" data-category="pr" style="transition: all 0.3s ease; opacity: 1; transform: scale(1);">
                     <div class="h-48 overflow-hidden bg-gray-100 relative">
                         <img src="images/noi_dung_tai_tro_bac_a_bank.jpg" alt="Nội dung và Tài trợ Báo Lao Động" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3 bg-brand-blue text-white text-[10px] font-bold px-2.5 py-1 rounded shadow-sm uppercase tracking-wide">Editorial</div>
@@ -841,7 +920,7 @@
                 </div>
 
                 <!-- SP 3: Truyền hình & Media -->
-                <div class="border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300">
+                <div class="product-card border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300" data-category="video" style="transition: all 0.3s ease; opacity: 1; transform: scale(1);">
                     <div class="h-48 overflow-hidden bg-gray-100 relative">
                         <img src="images/truyenhinh_cafe_hoa_hau.jpg" alt="Trường quay Lao Động TV" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3 bg-brand-blue text-white text-[10px] font-bold px-2.5 py-1 rounded shadow-sm uppercase tracking-wide">Video & Studio</div>
@@ -865,7 +944,7 @@
                 </div>
 
                 <!-- SP 4: Khai thác Mạng xã hội -->
-                <div class="border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300">
+                <div class="product-card border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300" data-category="banner" style="transition: all 0.3s ease; opacity: 1; transform: scale(1);">
                     <div class="h-48 overflow-hidden bg-gray-100 relative">
                         <img src="images/mang_xa_hoi_laodong_collage.png" alt="Mạng xã hội Báo Lao Động" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3 bg-brand-blue text-white text-[10px] font-bold px-2.5 py-1 rounded shadow-sm uppercase tracking-wide">Social Media</div>
@@ -887,7 +966,7 @@
                 </div>
 
                 <!-- SP 5: Bản quyền -->
-                <div class="border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300">
+                <div class="product-card border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300" data-category="pr" style="transition: all 0.3s ease; opacity: 1; transform: scale(1);">
                     <div class="h-48 overflow-hidden bg-gray-100 relative">
                         <img src="images/Bao-Lao-Dong.jpg" alt="Bản quyền" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3 bg-brand-blue text-white text-[10px] font-bold px-2.5 py-1 rounded shadow-sm uppercase tracking-wide">Copyright</div>
@@ -908,7 +987,7 @@
                 </div>
 
                 <!-- SP 6: Tổ chức sự kiện -->
-                <div class="border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300">
+                <div class="product-card border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300" data-category="event-print" style="transition: all 0.3s ease; opacity: 1; transform: scale(1);">
                     <div class="h-48 overflow-hidden bg-gray-100 relative">
                         <img src="images/chuyen_doi_xanh_2026.jpg" alt="Tổ chức sự kiện" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3 bg-brand-blue text-white text-[10px] font-bold px-2.5 py-1 rounded shadow-sm uppercase tracking-wide">Events</div>
@@ -929,7 +1008,7 @@
                 </div>
 
                 <!-- SP 7: Phát hành báo in -->
-                <div class="border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300">
+                <div class="product-card border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300" data-category="event-print" style="transition: all 0.3s ease; opacity: 1; transform: scale(1);">
                     <div class="h-48 overflow-hidden bg-gray-100 relative">
                         <img src="images/an_pham_bao_lao_dong_mockup.jpg" alt="Phát hành báo in" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3 bg-brand-blue text-white text-[10px] font-bold px-2.5 py-1 rounded shadow-sm uppercase tracking-wide">Print Shop</div>
@@ -950,7 +1029,7 @@
                 </div>
 
                 <!-- SP 8: Truyền thông quảng cáo trên báo in -->
-                <div class="border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300">
+                <div class="product-card border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden card-hover group flex flex-col h-full bg-white dark:bg-[#161B26] shadow-sm hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/10 transition-all duration-300" data-category="event-print" style="transition: all 0.3s ease; opacity: 1; transform: scale(1);">
                     <div class="h-48 overflow-hidden bg-gray-100 relative">
                         <img src="images/Baolao-Dong-1.jpg" alt="Truyền thông quảng cáo trên báo in" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3 bg-brand-blue text-white text-[10px] font-bold px-2.5 py-1 rounded shadow-sm uppercase tracking-wide">Print Ads</div>
@@ -1203,14 +1282,24 @@
                                 </a>
                             </p>
                         </div>
-                        <div class="bg-slate-50 dark:bg-white/[0.03] p-4 rounded-lg border-l-2 border-brand-blue text-slate-800 dark:text-white mt-auto">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-[11px] text-slate-500 dark:text-gray-400 font-medium">Lượt tiếp cận</span>
-                                <span class="text-xs font-bold text-brand-blue dark:text-blue-400">1.2 Triệu+</span>
+                        <div class="bg-slate-50 dark:bg-white/[0.03] p-4 rounded-lg border-l-2 border-brand-blue text-slate-800 dark:text-white mt-auto case-study-metrics">
+                            <div class="mb-2.5">
+                                <div class="flex justify-between items-center text-[11px]">
+                                    <span class="text-slate-500 dark:text-gray-400 font-medium">Lượt tiếp cận</span>
+                                    <span class="font-bold text-brand-blue dark:text-blue-400">1.2M+ (85%)</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-white/10 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                                    <div class="bg-brand-blue h-full rounded-full kpi-progress-bar" style="width: 0%; transition: width 1.5s ease-out;" data-target-width="85%"></div>
+                                </div>
                             </div>
-                            <div class="flex justify-between items-center">
-                                <span class="text-[11px] text-slate-500 dark:text-gray-400 font-medium">Tương tác MXH</span>
-                                <span class="text-xs font-bold text-slate-700 dark:text-white">12.000+</span>
+                            <div>
+                                <div class="flex justify-between items-center text-[11px]">
+                                    <span class="text-slate-500 dark:text-gray-400 font-medium">Tương tác MXH</span>
+                                    <span class="font-bold text-slate-700 dark:text-white">12K+ (70%)</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-white/10 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                                    <div class="bg-slate-400 dark:bg-white/40 h-full rounded-full kpi-progress-bar" style="width: 0%; transition: width 1.5s ease-out;" data-target-width="70%"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1230,14 +1319,24 @@
                                 </a>
                             </p>
                         </div>
-                        <div class="bg-slate-50 dark:bg-white/[0.03] p-4 rounded-lg border-l-2 border-brand-blue mt-auto">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-[11px] text-slate-500 dark:text-gray-400 font-medium">Vận động viên</span>
-                                <span class="text-xs font-bold text-brand-blue dark:text-blue-400">700+</span>
+                        <div class="bg-slate-50 dark:bg-white/[0.03] p-4 rounded-lg border-l-2 border-brand-blue mt-auto case-study-metrics">
+                            <div class="mb-2.5">
+                                <div class="flex justify-between items-center text-[11px]">
+                                    <span class="text-slate-500 dark:text-gray-400 font-medium">Vận động viên</span>
+                                    <span class="font-bold text-brand-blue dark:text-blue-400">700+ (90%)</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-white/10 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                                    <div class="bg-brand-blue h-full rounded-full kpi-progress-bar" style="width: 0%; transition: width 1.5s ease-out;" data-target-width="90%"></div>
+                                </div>
                             </div>
-                            <div class="flex justify-between items-center">
-                                <span class="text-[11px] text-slate-500 dark:text-gray-400 font-medium">Giải thưởng trao</span>
-                                <span class="text-xs font-bold text-slate-700 dark:text-white">32 Giải</span>
+                            <div>
+                                <div class="flex justify-between items-center text-[11px]">
+                                    <span class="text-slate-500 dark:text-gray-400 font-medium">Giải thưởng trao</span>
+                                    <span class="font-bold text-slate-700 dark:text-white">32 Giải (60%)</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-white/10 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                                    <div class="bg-slate-400 dark:bg-white/40 h-full rounded-full kpi-progress-bar" style="width: 0%; transition: width 1.5s ease-out;" data-target-width="60%"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1257,14 +1356,24 @@
                                 </a>
                             </p>
                         </div>
-                        <div class="bg-slate-50 dark:bg-white/[0.03] p-4 rounded-lg border-l-2 border-brand-blue mt-auto">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-[11px] text-slate-500 dark:text-gray-400 font-medium">Lượt xem Video</span>
-                                <span class="text-xs font-bold text-brand-blue dark:text-blue-400">50.000+</span>
+                        <div class="bg-slate-50 dark:bg-white/[0.03] p-4 rounded-lg border-l-2 border-brand-blue mt-auto case-study-metrics">
+                            <div class="mb-2.5">
+                                <div class="flex justify-between items-center text-[11px]">
+                                    <span class="text-slate-500 dark:text-gray-400 font-medium">Lượt xem Video</span>
+                                    <span class="font-bold text-brand-blue dark:text-blue-400">50K+ (80%)</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-white/10 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                                    <div class="bg-brand-blue h-full rounded-full kpi-progress-bar" style="width: 0%; transition: width 1.5s ease-out;" data-target-width="80%"></div>
+                                </div>
                             </div>
-                            <div class="flex justify-between items-center">
-                                <span class="text-[11px] text-slate-500 dark:text-gray-400 font-medium">Đánh giá MXH</span>
-                                <span class="text-xs font-bold text-slate-700 dark:text-white">Tích cực 98%</span>
+                            <div>
+                                <div class="flex justify-between items-center text-[11px]">
+                                    <span class="text-slate-500 dark:text-gray-400 font-medium">Đánh giá MXH</span>
+                                    <span class="font-bold text-slate-700 dark:text-white">Tích cực 98%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-white/10 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                                    <div class="bg-slate-400 dark:bg-white/40 h-full rounded-full kpi-progress-bar" style="width: 0%; transition: width 1.5s ease-out;" data-target-width="98%"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1284,14 +1393,24 @@
                                 </a>
                             </p>
                         </div>
-                        <div class="bg-slate-50 dark:bg-white/[0.03] p-4 rounded-lg border-l-2 border-brand-blue mt-auto">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-[11px] text-slate-500 dark:text-gray-400 font-medium">Ấn phẩm tặng</span>
-                                <span class="text-xs font-bold text-brand-blue dark:text-blue-400">13.000+ cuốn</span>
+                        <div class="bg-slate-50 dark:bg-white/[0.03] p-4 rounded-lg border-l-2 border-brand-blue mt-auto case-study-metrics">
+                            <div class="mb-2.5">
+                                <div class="flex justify-between items-center text-[11px]">
+                                    <span class="text-slate-500 dark:text-gray-400 font-medium">Ấn phẩm tặng</span>
+                                    <span class="font-bold text-brand-blue dark:text-blue-400">13K+ cuốn (95%)</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-white/10 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                                    <div class="bg-brand-blue h-full rounded-full kpi-progress-bar" style="width: 0%; transition: width 1.5s ease-out;" data-target-width="95%"></div>
+                                </div>
                             </div>
-                            <div class="flex justify-between items-center">
-                                <span class="text-[11px] text-slate-500 dark:text-gray-400 font-medium">Lực lượng nhận</span>
-                                <span class="text-xs font-bold text-slate-700 dark:text-white">3 Lực lượng</span>
+                            <div>
+                                <div class="flex justify-between items-center text-[11px]">
+                                    <span class="text-slate-500 dark:text-gray-400 font-medium">Lực lượng nhận</span>
+                                    <span class="font-bold text-slate-700 dark:text-white">3 Nhóm (100%)</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-white/10 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                                    <div class="bg-slate-400 dark:bg-white/40 h-full rounded-full kpi-progress-bar" style="width: 0%; transition: width 1.5s ease-out;" data-target-width="100%"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1407,33 +1526,43 @@
                             </p>
                         </div>
                         
-                        <!-- Compact Stepper inside unified container -->
+                        <!-- Compact Stepper inside unified container (Interactive Re-designed) -->
                         <div class="p-4 bg-slate-50 dark:bg-[#0B0F19]/60 rounded-xl border border-gray-250 dark:border-white/5">
-                            <h4 class="text-xs md:text-sm font-black uppercase text-[#A80000] dark:text-red-500 tracking-wider mb-4 flex items-center gap-1.5">
-                                <span class="w-2 h-2 rounded-full bg-[#A80000] animate-pulse"></span>
-                                Quy trình hợp tác tinh gọn
+                            <h4 class="text-xs md:text-sm font-black uppercase text-[#A80000] dark:text-brand-blue tracking-wider mb-4 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-[#A80000] dark:bg-brand-blue animate-pulse"></span>
+                                Quy trình hợp tác tương tác trực quan
                             </h4>
-                            <div class="grid grid-cols-5 gap-2 text-center text-[10px] md:text-xs font-bold text-[#A80000] dark:text-red-400">
-                                <div class="flex flex-col items-center">
-                                    <div class="w-9 h-9 rounded-full bg-[#A80000]/10 dark:bg-[#A80000]/15 text-[#A80000] dark:text-red-400 flex items-center justify-center mb-1 text-sm md:text-base"><i class="fa-solid fa-headset"></i></div>
-                                    <span class="leading-snug mt-1">1. Tiếp nhận</span>
+                            <div class="grid grid-cols-5 gap-2 text-center text-[10px] md:text-xs font-bold text-slate-800 dark:text-white" id="stepper-container">
+                                <!-- Step 1 -->
+                                <div class="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:scale-105" onclick="showStepTooltip(1)">
+                                    <div class="w-9 h-9 rounded-full bg-[#A80000] dark:bg-brand-blue text-white flex items-center justify-center mb-1 text-sm md:text-base shadow-inner transition-all duration-300" id="step-circle-1"><i class="fa-solid fa-headset"></i></div>
+                                    <span class="leading-snug mt-1 text-[9px] md:text-xs font-black text-[#A80000] dark:text-brand-blue transition-colors">1. Tiếp nhận</span>
                                 </div>
-                                <div class="flex flex-col items-center">
-                                    <div class="w-9 h-9 rounded-full bg-[#A80000]/10 dark:bg-[#A80000]/15 text-[#A80000] dark:text-red-400 flex items-center justify-center mb-1 text-sm md:text-base"><i class="fa-solid fa-lightbulb"></i></div>
-                                    <span class="leading-snug mt-1">2. Tư vấn</span>
+                                <!-- Step 2 -->
+                                <div class="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:scale-105" onclick="showStepTooltip(2)">
+                                    <div class="w-9 h-9 rounded-full bg-slate-100 dark:bg-white/5 text-slate-400 dark:text-gray-500 flex items-center justify-center mb-1 text-sm md:text-base group-hover:bg-[#A80000] group-hover:text-white dark:group-hover:bg-brand-blue dark:group-hover:text-white shadow-inner transition-all duration-300" id="step-circle-2"><i class="fa-solid fa-lightbulb"></i></div>
+                                    <span class="leading-snug mt-1 text-[9px] md:text-xs font-black text-slate-400 dark:text-gray-400 group-hover:text-[#A80000] dark:group-hover:text-brand-blue transition-colors">2. Tư vấn</span>
                                 </div>
-                                <div class="flex flex-col items-center">
-                                    <div class="w-9 h-9 rounded-full bg-[#A80000]/10 dark:bg-[#A80000]/15 text-[#A80000] dark:text-red-400 flex items-center justify-center mb-1 text-sm md:text-base"><i class="fa-solid fa-file-signature"></i></div>
-                                    <span class="leading-snug mt-1">3. Báo giá</span>
+                                <!-- Step 3 -->
+                                <div class="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:scale-105" onclick="showStepTooltip(3)">
+                                    <div class="w-9 h-9 rounded-full bg-slate-100 dark:bg-white/5 text-slate-400 dark:text-gray-500 flex items-center justify-center mb-1 text-sm md:text-base group-hover:bg-[#A80000] group-hover:text-white dark:group-hover:bg-brand-blue dark:group-hover:text-white shadow-inner transition-all duration-300" id="step-circle-3"><i class="fa-solid fa-file-signature"></i></div>
+                                    <span class="leading-snug mt-1 text-[9px] md:text-xs font-black text-slate-400 dark:text-gray-400 group-hover:text-[#A80000] dark:group-hover:text-brand-blue transition-colors">3. Báo giá</span>
                                 </div>
-                                <div class="flex flex-col items-center">
-                                    <div class="w-9 h-9 rounded-full bg-[#A80000]/10 dark:bg-[#A80000]/15 text-[#A80000] dark:text-red-400 flex items-center justify-center mb-1 text-sm md:text-base"><i class="fa-solid fa-rocket"></i></div>
-                                    <span class="leading-snug mt-1">4. Triển khai</span>
+                                <!-- Step 4 -->
+                                <div class="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:scale-105" onclick="showStepTooltip(4)">
+                                    <div class="w-9 h-9 rounded-full bg-slate-100 dark:bg-white/5 text-slate-400 dark:text-gray-500 flex items-center justify-center mb-1 text-sm md:text-base group-hover:bg-[#A80000] group-hover:text-white dark:group-hover:bg-brand-blue dark:group-hover:text-white shadow-inner transition-all duration-300" id="step-circle-4"><i class="fa-solid fa-rocket"></i></div>
+                                    <span class="leading-snug mt-1 text-[9px] md:text-xs font-black text-slate-400 dark:text-gray-400 group-hover:text-[#A80000] dark:group-hover:text-brand-blue transition-colors">4. Triển khai</span>
                                 </div>
-                                <div class="flex flex-col items-center">
-                                    <div class="w-9 h-9 rounded-full bg-[#A80000]/10 dark:bg-[#A80000]/15 text-[#A80000] dark:text-red-400 flex items-center justify-center mb-1 text-sm md:text-base"><i class="fa-solid fa-chart-line"></i></div>
-                                    <span class="leading-snug mt-1">5. Báo cáo</span>
+                                <!-- Step 5 -->
+                                <div class="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:scale-105" onclick="showStepTooltip(5)">
+                                    <div class="w-9 h-9 rounded-full bg-slate-100 dark:bg-white/5 text-slate-400 dark:text-gray-500 flex items-center justify-center mb-1 text-sm md:text-base group-hover:bg-[#A80000] group-hover:text-white dark:group-hover:bg-brand-blue dark:group-hover:text-white shadow-inner transition-all duration-300" id="step-circle-5"><i class="fa-solid fa-chart-line"></i></div>
+                                    <span class="leading-snug mt-1 text-[9px] md:text-xs font-black text-slate-400 dark:text-gray-400 group-hover:text-[#A80000] dark:group-hover:text-brand-blue transition-colors">5. Báo cáo</span>
                                 </div>
+                            </div>
+                            
+                            <!-- Tooltip step detail box -->
+                            <div id="step-tooltip-box" class="mt-4 p-3 bg-white dark:bg-[#161B26] border border-gray-200 dark:border-white/10 rounded-lg text-[11px] leading-relaxed text-slate-700 dark:text-gray-300 transition-all duration-300 shadow-sm">
+                                <strong>Bước 1 - Tiếp nhận nhu cầu:</strong> Quý đối tác gửi thông tin, đội ngũ chuyên viên của Báo Lao Động sẽ chủ động phản hồi ngay trong vòng 2 giờ làm việc để nắm bắt chi tiết.
                             </div>
                         </div>
                         
@@ -2091,11 +2220,65 @@
                 return;
             }
 
-            // Success action
+            // Success action: Show beautiful glassmorphic modal with progress countdown
             showToast('success', 'Gửi yêu cầu thành công!', 'Tài liệu Media Kit & Báo giá 2026 đang được gửi tới email ' + emailInput.value.trim() + '.');
+            
+            // Reset form & steps
             mediaKitForm.reset();
             if (typeof window.prevMediaStep === 'function') {
                 window.prevMediaStep();
+            }
+            
+            // Open Thank You Modal
+            const modal = document.getElementById('media-kit-modal');
+            const progressBar = document.getElementById('modal-progress-bar');
+            const countdownText = document.getElementById('modal-countdown-text');
+            
+            if (modal && progressBar && countdownText) {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modal.querySelector('.relative').classList.remove('scale-95');
+                modal.querySelector('.relative').classList.add('scale-100');
+                
+                // Reset progress stroke
+                progressBar.style.transition = 'none';
+                progressBar.style.strokeDashoffset = '213.6';
+                
+                // Start animation
+                setTimeout(() => {
+                    progressBar.style.transition = 'stroke-dashoffset 3s linear';
+                    progressBar.style.strokeDashoffset = '0';
+                }, 50);
+                
+                let timeLeft = 3;
+                countdownText.innerText = timeLeft + 's';
+                
+                if (window.mediaKitModalTimer) {
+                    clearInterval(window.mediaKitModalTimer);
+                }
+                
+                const timer = setInterval(() => {
+                    timeLeft--;
+                    countdownText.innerText = timeLeft + 's';
+                    if (timeLeft <= 0) {
+                        clearInterval(timer);
+                        // Trigger mock PDF download
+                        const link = document.createElement('a');
+                        link.href = 'https://laodong.vn'; // In production, this would be a path to Media_Kit_LaoDong.pdf
+                        link.target = '_blank';
+                        link.download = 'Bao_Lao_Dong_Media_Kit_2026.pdf';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                        
+                        // Automatically close modal after 1s
+                        setTimeout(() => {
+                            closeMediaKitModal();
+                        }, 1000);
+                    }
+                }, 1000);
+                
+                // Save timer in window context to allow cancelling if closed
+                window.mediaKitModalTimer = timer;
             }
         });
 
@@ -2441,6 +2624,39 @@
 
             startPillarAutoplay();
 
+            // --- PILLAR CONSOLE TAB SWITCHER (Console Dashboard version) ---
+            window.switchPillarConsoleTab = function(tabIndex) {
+                // Update nav buttons
+                for (let i = 1; i <= 3; i++) {
+                    const btn = document.getElementById('pillar-nav-btn-' + i);
+                    const panel = document.getElementById('pillar-console-panel-' + i);
+                    if (!btn || !panel) continue;
+                    if (i === tabIndex) {
+                        // Active state
+                        btn.classList.add('bg-[#A80000]', 'dark:bg-brand-blue', 'text-white', 'border-transparent', 'shadow-lg');
+                        btn.classList.remove('bg-white', 'dark:bg-[#161B26]', 'text-slate-755', 'dark:text-gray-300', 'border-gray-200', 'dark:border-white/10');
+                        panel.classList.remove('hidden', 'opacity-0', 'translate-x-4');
+                        panel.classList.add('opacity-100', 'translate-x-0');
+                    } else {
+                        // Inactive state
+                        btn.classList.remove('bg-[#A80000]', 'dark:bg-brand-blue', 'text-white', 'border-transparent', 'shadow-lg');
+                        btn.classList.add('bg-white', 'dark:bg-[#161B26]', 'text-slate-755', 'dark:text-gray-300', 'border-gray-200', 'dark:border-white/10');
+                        panel.classList.add('hidden', 'opacity-0', 'translate-x-4');
+                        panel.classList.remove('opacity-100', 'translate-x-0');
+                    }
+                }
+            };
+
+            // --- PILLAR CARD EXPAND (New showcase version) ---
+            window.expandPillar = function(index) {
+                // Visual highlight on click - brief pulse effect
+                const card = document.getElementById('pillar-card-' + index);
+                if (card) {
+                    card.style.transform = 'translateY(-6px)';
+                    setTimeout(() => { card.style.transform = ''; }, 400);
+                }
+            };
+
             // --- COUNTER ANIMATION ---
             const counters = document.querySelectorAll('.stat-counter');
             if (counters.length > 0) {
@@ -2477,6 +2693,108 @@
                 }, { threshold: 0.1 });
 
                 counters.forEach(counter => counterObserver.observe(counter));
+            }
+
+            // --- PRODUCT CARDS FILTER (Interactive Category Filters) ---
+            const filterBtns = document.querySelectorAll('.product-filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            if (filterBtns.length > 0 && productCards.length > 0) {
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        // Reset active state for all buttons
+                        filterBtns.forEach(b => {
+                            b.classList.remove('bg-[#A80000]', 'dark:bg-brand-blue', 'text-white', 'border-transparent');
+                            b.classList.add('bg-white', 'dark:bg-[#161B26]', 'text-slate-700', 'dark:text-gray-300', 'border-gray-200', 'dark:border-white/10');
+                        });
+                        
+                        // Add active state to clicked button
+                        btn.classList.add('bg-[#A80000]', 'dark:bg-brand-blue', 'text-white', 'border-transparent');
+                        btn.classList.remove('bg-white', 'dark:bg-[#161B26]', 'text-slate-700', 'dark:text-gray-300', 'border-gray-200', 'dark:border-white/10');
+                        
+                        const filterValue = btn.getAttribute('data-filter');
+                        
+                        productCards.forEach(card => {
+                            const category = card.getAttribute('data-category');
+                            if (filterValue === 'all' || category === filterValue) {
+                                card.style.display = 'flex';
+                                setTimeout(() => {
+                                    card.style.opacity = '1';
+                                    card.style.transform = 'scale(1)';
+                                }, 10);
+                            } else {
+                                card.style.opacity = '0';
+                                card.style.transform = 'scale(0.95)';
+                                setTimeout(() => {
+                                    card.style.display = 'none';
+                                }, 300);
+                            }
+                        });
+                    });
+                });
+            }
+
+            // --- STEPPER TOOLTIPS ---
+            const stepDetails = {
+                1: "<strong>Bước 1 - Tiếp nhận nhu cầu:</strong> Quý đối tác gửi thông tin đăng ký tải Media Kit hoặc liên hệ tư vấn. Chuyên viên của Báo sẽ phản hồi trong vòng 2 giờ làm việc.",
+                2: "<strong>Bước 2 - Tư vấn giải pháp:</strong> Chuyên gia Báo Lao Động phân tích đặc thù sản phẩm, gợi ý các dạng thức tối ưu nhất (PR, Video, Banner hay Social).",
+                3: "<strong>Bước 3 - Báo giá & Ký kết:</strong> Cung cấp bảng dự toán chi phí chi tiết, chiết khấu tối ưu và xúc tiến thủ tục ký kết hợp đồng quảng cáo chính thức.",
+                4: "<strong>Bước 4 - Triển khai chiến dịch:</strong> Ekip thực hiện lên bài PR chuyên sâu, thiết kế Banner hiển thị, quay dựng Talkshow và kích hoạt hệ thống đo lường.",
+                5: "<strong>Bước 5 - Báo cáo & Nghiệm thu:</strong> Cung cấp báo cáo traffic trực quan (lượt xem, CTR, lượng tiếp cận Google) và nghiệm thu kết quả hiệu quả thực tế."
+            };
+            
+            window.showStepTooltip = function(step) {
+                const tooltipBox = document.getElementById('step-tooltip-box');
+                if (tooltipBox && stepDetails[step]) {
+                    tooltipBox.innerHTML = stepDetails[step];
+                    
+                    // Highlight selected step circle, reset others
+                    for (let i = 1; i <= 5; i++) {
+                        const circle = document.getElementById('step-circle-' + i);
+                        const label = circle.nextElementSibling;
+                        if (i <= step) {
+                            circle.classList.add('bg-[#A80000]', 'dark:bg-brand-blue', 'text-white');
+                            circle.classList.remove('bg-slate-100', 'dark:bg-white/5', 'text-slate-400', 'dark:text-gray-500');
+                            label.classList.add('text-[#A80000]', 'dark:text-brand-blue');
+                            label.classList.remove('text-slate-400', 'dark:text-gray-400');
+                        } else {
+                            circle.classList.remove('bg-[#A80000]', 'dark:bg-brand-blue', 'text-white');
+                            circle.classList.add('bg-slate-100', 'dark:bg-white/5', 'text-slate-400', 'dark:text-gray-500');
+                            label.classList.remove('text-[#A80000]', 'dark:text-brand-blue');
+                            label.classList.add('text-slate-400', 'dark:text-gray-400');
+                        }
+                    }
+                }
+            };
+
+            // --- MEDIA KIT MODAL CLOSE FUNCTIONS ---
+            window.closeMediaKitModal = function() {
+                const modal = document.getElementById('media-kit-modal');
+                if (modal) {
+                    modal.classList.add('opacity-0', 'pointer-events-none');
+                    modal.querySelector('.relative').classList.remove('scale-100');
+                    modal.querySelector('.relative').classList.add('scale-95');
+                }
+                if (window.mediaKitModalTimer) {
+                    clearInterval(window.mediaKitModalTimer);
+                }
+            };
+
+            // --- CASE STUDIES KPI ANIMATION (IntersectionObserver) ---
+            const kpiBars = document.querySelectorAll('.kpi-progress-bar');
+            if (kpiBars.length > 0) {
+                const kpiObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const bar = entry.target;
+                            const targetWidth = bar.getAttribute('data-target-width') || '0%';
+                            bar.style.width = targetWidth;
+                            kpiObserver.unobserve(bar); // Only animate once
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                kpiBars.forEach(bar => kpiObserver.observe(bar));
             }
 
             // --- TIMELINE SLIDER NAVIGATION ---
@@ -2604,6 +2922,42 @@
             <!-- Online status indicator -->
             <span class="absolute top-0.5 right-0.5 w-3.5 h-3.5 bg-green-500 border-2 border-white dark:border-[#0B0F19] rounded-full shadow-sm"></span>
         </button>
+    </div>
+    <!-- MODAL POPUP MEDIA KIT DOWNLOAD THANK YOU -->
+    <div id="media-kit-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+        <div class="relative w-full max-w-md bg-white/95 dark:bg-[#161B26]/95 border border-gray-200 dark:border-white/10 p-6 md:p-8 rounded-3xl shadow-2xl backdrop-blur-md transform scale-95 transition-all duration-300 text-center text-slate-800 dark:text-white">
+            <!-- Close button -->
+            <button id="close-media-modal" class="absolute top-4 right-4 text-slate-400 hover:text-slate-850 dark:hover:text-white transition p-1.5 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg" onclick="closeMediaKitModal()" aria-label="Close modal">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            
+            <!-- Icon -->
+            <div class="w-16 h-16 rounded-full bg-green-500/10 text-green-600 dark:text-green-400 flex items-center justify-center text-3xl mx-auto mb-4 animate-bounce">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            
+            <!-- Title -->
+            <h4 class="text-xl md:text-2xl font-serif font-black mb-2 text-slate-850 dark:text-white">Cảm ơn Quý đối tác!</h4>
+            <p class="text-slate-600 dark:text-gray-300 text-xs md:text-sm mb-6">Yêu cầu nhận Media Kit của bạn đã được tiếp nhận thành công. Bộ tài liệu đang chuẩn bị được tải xuống...</p>
+            
+            <!-- Progress Ring/Countdown -->
+            <div class="relative w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                <!-- SVG Progress Circle -->
+                <svg class="w-full h-full transform -rotate-90">
+                    <circle cx="40" cy="40" r="34" class="text-gray-200 dark:text-white/5" stroke-width="4" stroke="currentColor" fill="transparent"/>
+                    <circle cx="40" cy="40" r="34" id="modal-progress-bar" class="text-[#A80000] dark:text-brand-blue" stroke-width="4" stroke-dasharray="213.6" stroke-dashoffset="213.6" stroke-linecap="round" stroke="currentColor" fill="transparent"/>
+                </svg>
+                <span id="modal-countdown-text" class="absolute text-xl font-bold text-slate-800 dark:text-white">3s</span>
+            </div>
+            
+            <!-- Download details & manual button -->
+            <div class="space-y-3">
+                <p class="text-[10px] text-slate-400 dark:text-gray-500">Tài liệu chi tiết cũng sẽ được gửi về địa chỉ email của bạn.</p>
+                <a href="https://laodong.vn" target="_blank" download id="modal-manual-download" class="inline-flex items-center gap-2 bg-[#A80000] hover:bg-[#8B0000] dark:bg-brand-blue dark:hover:bg-blue-600 text-white font-bold py-2.5 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg text-xs w-full justify-center">
+                    <i class="fa-solid fa-download"></i> Tải xuống trực tiếp ngay
+                </a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
