@@ -1,0 +1,276 @@
+            <!-- REDESIGNED: Three Pillars - Premium Horizontal Showcase -->
+            <div class="mt-8" id="pillar-showcase">
+
+                <!-- Section Divider -->
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 dark:via-white/10 to-transparent"></div>
+                    <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-gray-500">3 Trụ cột Sức mạnh Cạnh tranh</span>
+                    <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 dark:via-white/10 to-transparent"></div>
+                </div>
+
+                <!-- Pillar Cards Grid: 3 columns on desktop, stacked on mobile -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0 rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-2xl" id="pillar-cards-grid">
+
+                    <!-- ===== PILLAR 1: DI SAN & UY TIN ===== -->
+                    <div class="pillar-card relative group cursor-pointer overflow-hidden transition-all duration-500 border-r border-gray-200 dark:border-white/10"
+                         id="pillar-card-1"
+                         onclick="expandPillar(1)"
+                         style="background: linear-gradient(135deg, #fff 0%, #fdf8f4 100%);">
+
+                        <!-- Dark mode bg via class manipulation -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-white to-amber-50/30 dark:from-[#161B26] dark:to-[#1a1210] pointer-events-none"></div>
+
+                        <!-- Large watermark number -->
+                        <div class="absolute top-3 right-4 text-[80px] font-black leading-none text-amber-500/10 dark:text-amber-500/8 select-none pointer-events-none font-serif" aria-hidden="true">I</div>
+
+                        <!-- Top accent bar -->
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600"></div>
+
+                        <!-- Card Content -->
+                        <div class="relative z-10 p-6 md:p-5 lg:p-6">
+
+                            <!-- Pillar label -->
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="w-7 h-7 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400 text-xs">
+                                    <i class="fa-solid fa-award"></i>
+                                </span>
+                                <span class="text-[9px] font-black uppercase tracking-[0.15em] text-amber-600 dark:text-amber-400">Trụ cột 01</span>
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="font-serif font-black text-slate-800 dark:text-white text-lg md:text-base lg:text-xl leading-tight mb-2 tracking-wide uppercase">
+                                Di sản &amp; Uy tín
+                            </h3>
+                            <p class="text-slate-500 dark:text-gray-400 text-xs leading-relaxed mb-5">
+                                Bảo chứng thương hiệu từ tờ báo Cách mạng lâu đời nhất Việt Nam — <strong class="text-slate-700 dark:text-gray-200">97 năm</strong> tiếng nói uy tín.
+                            </p>
+
+                            <!-- 3 Key Metrics in a compact row -->
+                            <div class="space-y-2.5 mb-5">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-600 dark:text-amber-400 flex-shrink-0 text-xs">
+                                        <i class="fa-solid fa-newspaper"></i>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white">Báo in 1929</div>
+                                        <div class="text-[9.5px] text-slate-500 dark:text-gray-500 truncate">Tờ báo CM lâu đời nhất VN</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-600 dark:text-amber-400 flex-shrink-0 text-xs">
+                                        <i class="fa-solid fa-laptop-code"></i>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white">Báo số 1999</div>
+                                        <div class="text-[9.5px] text-slate-500 dark:text-gray-500 truncate">Tiên phong báo điện tử VN</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-600 dark:text-amber-400 flex-shrink-0 text-xs">
+                                        <i class="fa-solid fa-globe"></i>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white">Top 250 Thế giới</div>
+                                        <div class="text-[9.5px] text-slate-500 dark:text-gray-500 truncate">Paris Press Exhibition 1995</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Big Stat Highlight -->
+                            <div class="rounded-xl bg-gradient-to-br from-amber-500/10 to-amber-600/5 border border-amber-500/20 p-3 flex items-center gap-3 mb-5">
+                                <div class="text-3xl font-black text-amber-600 dark:text-amber-400 leading-none">97</div>
+                                <div>
+                                    <div class="text-[10px] font-bold text-slate-700 dark:text-gray-300 uppercase tracking-wider">Năm Thành lập</div>
+                                    <div class="text-[9px] text-slate-400 dark:text-gray-500">1929 — Nay</div>
+                                </div>
+                            </div>
+
+                            <!-- Expand CTA -->
+                            <a href="https://laodong.vn/infographic/nhung-dau-moc-quan-trong-cua-bao-lao-dong-qua-93-nam-lich-su-1080017.ldo" target="_blank"
+                               class="inline-flex items-center gap-1.5 text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 font-extrabold text-[10.5px] transition-colors group/link">
+                                Lịch sử hình thành
+                                <i class="fa-solid fa-arrow-right text-[9px] group-hover/link:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <!-- Bottom gradient accent on hover -->
+                        <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    </div>
+
+                    <!-- ===== PILLAR 2: DOC GIA ===== -->
+                    <div class="pillar-card relative group cursor-pointer overflow-hidden transition-all duration-500 border-r border-gray-200 dark:border-white/10"
+                         id="pillar-card-2"
+                         onclick="expandPillar(2)">
+
+                        <div class="absolute inset-0 bg-gradient-to-br from-white to-red-50/20 dark:from-[#161B26] dark:to-[#120f18] pointer-events-none"></div>
+
+                        <!-- Large watermark number -->
+                        <div class="absolute top-3 right-4 text-[80px] font-black leading-none text-[#A80000]/8 dark:text-brand-blue/8 select-none pointer-events-none font-serif" aria-hidden="true">II</div>
+
+                        <!-- Top accent bar -->
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#A80000] via-red-500 to-[#A80000] dark:from-brand-blue dark:via-blue-400 dark:to-brand-blue"></div>
+
+                        <!-- Card Content -->
+                        <div class="relative z-10 p-6 md:p-5 lg:p-6">
+
+                            <!-- Pillar label -->
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="w-7 h-7 rounded-lg bg-[#A80000]/10 dark:bg-brand-blue/15 border border-[#A80000]/20 dark:border-brand-blue/25 flex items-center justify-center text-[#A80000] dark:text-brand-blue text-xs">
+                                    <i class="fa-solid fa-users"></i>
+                                </span>
+                                <span class="text-[9px] font-black uppercase tracking-[0.15em] text-[#A80000] dark:text-brand-blue">Trụ cột 02</span>
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="font-serif font-black text-slate-800 dark:text-white text-lg md:text-base lg:text-xl leading-tight mb-2 tracking-wide uppercase">
+                                Độc giả
+                            </h3>
+                            <p class="text-slate-500 dark:text-gray-400 text-xs leading-relaxed mb-5">
+                                Hơn <strong class="text-slate-700 dark:text-gray-200">700M+ độc giả/năm</strong> thuộc nhóm nhân khẩu học có sức mua cao nhất thị trường.
+                            </p>
+
+                            <!-- Demographics compact -->
+                            <div class="space-y-2.5 mb-5">
+                                <!-- Gender bar -->
+                                <div>
+                                    <div class="flex justify-between text-[9.5px] font-bold mb-1">
+                                        <span class="text-slate-600 dark:text-gray-400"><i class="fa-solid fa-mars mr-1 text-[#A80000] dark:text-brand-blue"></i>Nam 58%</span>
+                                        <span class="text-purple-600 dark:text-purple-400"><i class="fa-solid fa-venus mr-1"></i>Nữ 42%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full overflow-hidden flex bg-gray-200 dark:bg-white/10">
+                                        <div class="bg-[#A80000] dark:bg-brand-blue h-full rounded-l-full transition-all duration-1000" style="width:58%"></div>
+                                        <div class="bg-purple-400 h-full rounded-r-full" style="width:42%"></div>
+                                    </div>
+                                </div>
+                                <!-- Age highlight -->
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-[#A80000]/10 dark:bg-brand-blue/15 flex items-center justify-center text-[#A80000] dark:text-brand-blue flex-shrink-0 text-xs">
+                                        <i class="fa-solid fa-calendar-check"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white">Nhóm 25–54 tuổi</div>
+                                        <div class="text-[9.5px] text-slate-500 dark:text-gray-500">Độ tuổi sức mua cao nhất</div>
+                                    </div>
+                                </div>
+                                <!-- Engagement -->
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-[#A80000]/10 dark:bg-brand-blue/15 flex items-center justify-center text-[#A80000] dark:text-brand-blue flex-shrink-0 text-xs">
+                                        <i class="fa-solid fa-circle-nodes"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white">65% trực tiếp</div>
+                                        <div class="text-[9.5px] text-slate-500 dark:text-gray-500">Độc giả trung thành cốt lõi</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Big Stat Highlight -->
+                            <div class="rounded-xl bg-gradient-to-br from-[#A80000]/8 to-[#A80000]/3 dark:from-brand-blue/10 dark:to-brand-blue/3 border border-[#A80000]/15 dark:border-brand-blue/20 p-3 flex items-center gap-3 mb-5">
+                                <div class="text-3xl font-black text-[#A80000] dark:text-brand-blue leading-none">76%</div>
+                                <div>
+                                    <div class="text-[10px] font-bold text-slate-700 dark:text-gray-300 uppercase tracking-wider">Nhóm 25–54T</div>
+                                    <div class="text-[9px] text-slate-400 dark:text-gray-500">Báo cáo Audience 2026</div>
+                                </div>
+                            </div>
+
+                            <!-- CTA -->
+                            <span class="inline-flex items-center gap-1.5 text-[#A80000] dark:text-brand-blue font-extrabold text-[10.5px] cursor-default">
+                                Chân dung độc giả toàn diện
+                                <i class="fa-solid fa-chart-bar text-[9px]"></i>
+                            </span>
+                        </div>
+
+                        <!-- Bottom hover accent -->
+                        <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#A80000] via-red-400 to-[#A80000] dark:from-brand-blue dark:via-blue-400 dark:to-brand-blue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    </div>
+
+                    <!-- ===== PILLAR 3: HA TANG SO & KET NOI ===== -->
+                    <div class="pillar-card relative group cursor-pointer overflow-hidden transition-all duration-500"
+                         id="pillar-card-3"
+                         onclick="expandPillar(3)">
+
+                        <div class="absolute inset-0 bg-gradient-to-br from-white to-cyan-50/20 dark:from-[#161B26] dark:to-[#0f1518] pointer-events-none"></div>
+
+                        <!-- Large watermark number -->
+                        <div class="absolute top-3 right-4 text-[80px] font-black leading-none text-brand-blue/8 select-none pointer-events-none font-serif" aria-hidden="true">III</div>
+
+                        <!-- Top accent bar -->
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-blue via-cyan-400 to-brand-blue"></div>
+
+                        <!-- Card Content -->
+                        <div class="relative z-10 p-6 md:p-5 lg:p-6">
+
+                            <!-- Pillar label -->
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="w-7 h-7 rounded-lg bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-xs">
+                                    <i class="fa-solid fa-network-wired"></i>
+                                </span>
+                                <span class="text-[9px] font-black uppercase tracking-[0.15em] text-brand-blue">Trụ cột 03</span>
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="font-serif font-black text-slate-800 dark:text-white text-lg md:text-base lg:text-xl leading-tight mb-2 tracking-wide uppercase">
+                                Hạ tầng Số &amp; Kết nối
+                            </h3>
+                            <p class="text-slate-500 dark:text-gray-400 text-xs leading-relaxed mb-5">
+                                Hệ sinh thái đa ngôn ngữ <strong class="text-slate-700 dark:text-gray-200">8 ngôn ngữ</strong> và công nghệ trường quay ảo 3D AR/VR tiên phong.
+                            </p>
+
+                            <!-- 3 Key Items -->
+                            <div class="space-y-2.5 mb-5">
+                                <!-- Language badges -->
+                                <div class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-blue/10 flex items-center justify-center text-brand-blue flex-shrink-0 text-xs mt-0.5">
+                                        <i class="fa-solid fa-language"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white mb-1">Hạ tầng 8 Ngôn ngữ</div>
+                                        <div class="flex flex-wrap gap-1">
+                                            <span class="text-[8.5px] font-bold px-1.5 py-0.5 rounded bg-brand-blue/10 dark:bg-white/5 border border-brand-blue/20 dark:border-white/10 text-brand-blue dark:text-gray-300">🇻🇳🇬🇧🇫🇷🇪🇸🇷🇺🇨🇳🇯🇵🇰🇷</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-blue/10 flex items-center justify-center text-brand-blue flex-shrink-0 text-xs">
+                                        <i class="fa-solid fa-video"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white">Trường quay 3D AR/VR</div>
+                                        <div class="text-[9.5px] text-slate-500 dark:text-gray-500">Real-time rendering studio</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-blue/10 flex items-center justify-center text-brand-blue flex-shrink-0 text-xs">
+                                        <i class="fa-solid fa-mobile-screen"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-[11px] font-black text-slate-800 dark:text-white">Đa nền tảng số</div>
+                                        <div class="text-[9.5px] text-slate-500 dark:text-gray-500">Web, App, YouTube, Facebook, TikTok</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Big Stat Highlight -->
+                            <div class="rounded-xl bg-gradient-to-br from-brand-blue/8 to-brand-blue/3 border border-brand-blue/15 p-3 flex items-center gap-3 mb-5">
+                                <div class="text-3xl font-black text-brand-blue leading-none">8</div>
+                                <div>
+                                    <div class="text-[10px] font-bold text-slate-700 dark:text-gray-300 uppercase tracking-wider">Ngôn ngữ Toàn cầu</div>
+                                    <div class="text-[9px] text-slate-400 dark:text-gray-500">Global Reach Portal</div>
+                                </div>
+                            </div>
+
+                            <!-- CTA -->
+                            <a href="https://laodong.vn/media" target="_blank"
+                               class="inline-flex items-center gap-1.5 text-brand-blue hover:text-blue-600 dark:hover:text-blue-300 font-extrabold text-[10.5px] transition-colors group/link">
+                                Khám phá nền tảng số
+                                <i class="fa-solid fa-arrow-right text-[9px] group-hover/link:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <!-- Bottom hover accent -->
+                        <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-brand-blue via-cyan-400 to-brand-blue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    </div>
+
+                </div><!-- end pillar-cards-grid -->
+
+            </div><!-- end pillar-showcase -->
