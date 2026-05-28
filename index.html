@@ -207,8 +207,8 @@
                     </div>
                 </div>
 
-                <a href="#lien-he" class="hidden md:block text-sm font-bold text-slate-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue">Nhận tư vấn</a>
-                <a href="#media-kit" class="hidden sm:inline-block bg-[#A80000] hover:bg-[#8B0000] text-white px-5 py-2.5 rounded-md text-sm font-bold transition shadow-md hover:shadow-lg">Tải Media Kit</a>
+                <a href="#" onclick="openChatWithContext('Tôi muốn nhận tư vấn hợp tác'); return false;" class="hidden md:block text-sm font-bold text-slate-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue">Nhận tư vấn</a>
+                <a href="#" onclick="openChatWithContext('Tôi muốn tải tài liệu Media Kit'); return false;" class="hidden sm:inline-block bg-[#A80000] hover:bg-[#8B0000] text-white px-5 py-2.5 rounded-md text-sm font-bold transition shadow-md hover:shadow-lg">Tải Media Kit</a>
                 <button id="mobile-menu-btn" class="lg:hidden text-slate-800 dark:text-white hover:text-brand-blue focus:outline-none p-2" aria-label="Toggle menu">
                     <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
@@ -232,9 +232,9 @@
                     <a href="#lien-he" class="hover:text-brand-blue transition">Liên hệ</a>
                 </nav>
                 <div class="mt-auto border-t border-gray-200 dark:border-white/10 pt-6 space-y-4">
-                    <a href="#lien-he" class="block text-center text-sm font-semibold text-slate-600 dark:text-gray-300 hover:text-brand-blue py-2">Nhận tư vấn</a>
-                    <a href="#lien-he" class="block text-center border border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white py-3 rounded-md text-sm font-semibold transition shadow-sm">Đặt báo in</a>
-                    <a href="#media-kit" class="block text-center bg-[#A80000] hover:bg-[#8B0000] text-white py-3 rounded-md text-sm font-semibold transition shadow-md">Tải Media Kit</a>
+                    <a href="#" onclick="openChatWithContext('Tôi muốn nhận tư vấn hợp tác'); return false;" class="block text-center text-sm font-semibold text-slate-600 dark:text-gray-300 hover:text-brand-blue py-2">Nhận tư vấn</a>
+                    <a href="#" onclick="openChatWithContext('Tôi muốn đặt báo in'); return false;" class="block text-center border border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white py-3 rounded-md text-sm font-semibold transition shadow-sm">Đặt báo in</a>
+                    <a href="#" onclick="openChatWithContext('Tôi muốn tải tài liệu Media Kit'); return false;" class="block text-center bg-[#A80000] hover:bg-[#8B0000] text-white py-3 rounded-md text-sm font-semibold transition shadow-md">Tải Media Kit</a>
                 </div>
             </div>
         </div>
@@ -1568,56 +1568,14 @@
                         
                         <!-- Media Kit Form -->
                         <div class="bg-slate-50/50 dark:bg-[#0B0F19]/40 p-4 sm:p-5 rounded-xl border border-gray-250 dark:border-white/5">
-                            <form id="media-kit-form" class="space-y-4">
-                                <!-- Step 1 Container -->
-                                <div id="media-step-1" class="space-y-4">
-                                    <div>
-                                        <label class="block text-xs font-bold text-slate-550 dark:text-gray-400 uppercase tracking-wider mb-2">Họ và tên *</label>
-                                        <input type="text" id="media-name" placeholder="Ví dụ: Nguyễn Văn A" required class="w-full px-4 py-2.5 rounded-lg bg-white dark:bg-[#161B26] text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-blue border border-gray-300 dark:border-white/15 transition text-sm">
-                                    </div>
-                                    <div>
-                                        <label class="block text-xs font-bold text-slate-550 dark:text-gray-400 uppercase tracking-wider mb-2">Email công ty (Work Email) *</label>
-                                        <input type="email" id="media-email" placeholder="name@company.com" required class="w-full px-4 py-2.5 rounded-lg bg-white dark:bg-[#161B26] text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-blue border border-gray-300 dark:border-white/15 transition text-sm">
-                                    </div>
-                                    <button type="button" onclick="nextMediaStep()" class="w-full bg-[#A80000] hover:bg-[#8B0000] text-white font-bold py-3 rounded-lg transition duration-300 shadow-md text-sm flex items-center justify-center gap-2">
-                                        <span>Tiếp tục bước 2</span> <i class="fa-solid fa-arrow-right text-xs"></i>
-                                    </button>
-                                </div>
-
-                                <!-- Step 2 Container (Initially Hidden) -->
-                                <div id="media-step-2" class="space-y-4 hidden">
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                        <div>
-                                            <label class="block text-xs font-bold text-slate-555 dark:text-gray-400 uppercase tracking-wider mb-2">Tên Đơn vị / Công ty *</label>
-                                            <input type="text" id="media-company" placeholder="Tên doanh nghiệp" required class="w-full px-4 py-2.5 rounded-lg bg-white dark:bg-[#161B26] text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-blue border border-gray-300 dark:border-white/15 transition text-sm">
-                                        </div>
-                                        <div>
-                                            <label class="block text-xs font-bold text-slate-555 dark:text-gray-400 uppercase tracking-wider mb-2">Số điện thoại *</label>
-                                            <input type="tel" id="media-phone" placeholder="Số điện thoại liên hệ" required class="w-full px-4 py-2.5 rounded-lg bg-white dark:bg-[#161B26] text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-blue border border-gray-300 dark:border-white/15 transition text-sm">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label class="block text-xs font-bold text-slate-555 dark:text-gray-400 uppercase tracking-wider mb-2">Nhu cầu hợp tác chính</label>
-                                        <select id="media-needs" required class="w-full px-4 py-2.5 rounded-lg bg-white dark:bg-[#161B26] text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-blue border border-gray-300 dark:border-white/15 transition text-sm">
-                                            <option value="">Chọn nhu cầu...</option>
-                                            <option value="pr">Bài viết PR & Native Ads</option>
-                                            <option value="banner">Quảng cáo Banner hiển thị</option>
-                                            <option value="video">Talkshow & Media truyền hình</option>
-                                            <option value="social">Mạng xã hội (Facebook/TikTok/Youtube)</option>
-                                            <option value="event">Đồng hành Tổ chức Sự kiện/Hội thảo</option>
-                                            <option value="other">Các gói hợp tác chiến lược khác</option>
-                                        </select>
-                                    </div>
-                                    <div class="flex gap-2">
-                                        <button type="button" onclick="prevMediaStep()" class="w-1/3 bg-slate-100 dark:bg-white/5 border border-gray-300 dark:border-white/20 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-705 dark:text-white font-bold py-3 rounded-lg transition duration-300 text-sm">
-                                            Quay lại
-                                        </button>
-                                        <button type="submit" class="w-2/3 bg-[#A80000] hover:bg-[#8B0000] text-white font-bold py-3 rounded-lg transition duration-300 shadow-md text-sm">
-                                            Mở khóa Media Kit & Báo giá
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
+                            
+                            <div class="text-center py-6">
+                                <h4 class="text-sm font-bold text-slate-800 dark:text-white mb-4">Tải nhanh toàn bộ tài liệu qua Trợ lý ảo</h4>
+                                <button onclick="openChatWithContext('Tôi muốn tải tài liệu Media Kit')" class="bg-[#A80000] hover:bg-[#8B0000] text-white font-bold py-3 px-8 rounded-lg transition duration-300 shadow-md text-sm inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-robot"></i> Trợ lý ảo hỗ trợ 24/7
+                                </button>
+                            </div>
+    
                             <!-- Privacy notice B2B premium -->
                             <div class="mt-4 flex items-start gap-2 text-[10px] text-slate-500 dark:text-gray-400 leading-relaxed bg-slate-100 dark:bg-white/[0.02] p-3 rounded-lg border border-gray-250 dark:border-white/10">
                                 <i class="fa-solid fa-shield-halved text-[#A80000] dark:text-brand-blue mt-0.5 text-xs"></i>
@@ -1704,35 +1662,16 @@
                     <h4 class="text-xl font-serif font-black text-slate-800 dark:text-white mb-6 flex items-center gap-2">
                         <span class="w-2.5 h-2.5 rounded-full bg-[#A80000] dark:bg-brand-blue inline-block animate-pulse"></span> Gửi Yêu Cầu Hợp Tác
                     </h4>
-                    <form id="contact-form" class="space-y-4">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label for="contact-name" class="block text-xs font-bold text-slate-500 dark:text-gray-400 mb-1 uppercase tracking-wider">Họ và tên *</label>
-                                <input type="text" id="contact-name" required class="w-full bg-slate-50/50 dark:bg-brand-dark/30 border border-gray-250 dark:border-white/10 text-slate-800 dark:text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#A80000] dark:focus:border-brand-blue focus:ring-1 focus:ring-[#A80000] dark:focus:ring-brand-blue transition duration-300 hover:bg-white dark:hover:bg-brand-dark/45">
-                            </div>
-                            <div>
-                                <label for="contact-company" class="block text-xs font-bold text-slate-500 dark:text-gray-400 mb-1 uppercase tracking-wider">Tên Đơn vị/Tổ chức *</label>
-                                <input type="text" id="contact-company" required class="w-full bg-slate-50/50 dark:bg-brand-dark/30 border border-gray-250 dark:border-white/10 text-slate-800 dark:text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#A80000] dark:focus:border-brand-blue focus:ring-1 focus:ring-[#A80000] dark:focus:ring-brand-blue transition duration-300 hover:bg-white dark:hover:bg-brand-dark/45">
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label for="contact-email" class="block text-xs font-bold text-slate-500 dark:text-gray-400 mb-1 uppercase tracking-wider">Email *</label>
-                                <input type="email" id="contact-email" required class="w-full bg-slate-50/50 dark:bg-brand-dark/30 border border-gray-250 dark:border-white/10 text-slate-800 dark:text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#A80000] dark:focus:border-brand-blue focus:ring-1 focus:ring-[#A80000] dark:focus:ring-brand-blue transition duration-300 hover:bg-white dark:hover:bg-brand-dark/45">
-                            </div>
-                            <div>
-                                <label for="contact-phone" class="block text-xs font-bold text-slate-500 dark:text-gray-400 mb-1 uppercase tracking-wider">Số điện thoại *</label>
-                                <input type="tel" id="contact-phone" required class="w-full bg-slate-50/50 dark:bg-brand-dark/30 border border-gray-250 dark:border-white/10 text-slate-800 dark:text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#A80000] dark:focus:border-brand-blue focus:ring-1 focus:ring-[#A80000] dark:focus:ring-brand-blue transition duration-300 hover:bg-white dark:hover:bg-brand-dark/45">
-                            </div>
-                        </div>
-                        <div>
-                            <label for="contact-message" class="block text-xs font-bold text-slate-500 dark:text-gray-400 mb-1 uppercase tracking-wider">Nội dung nhu cầu *</label>
-                            <textarea id="contact-message" rows="3" required class="w-full bg-slate-50/50 dark:bg-brand-dark/30 border border-gray-250 dark:border-white/10 text-slate-800 dark:text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#A80000] dark:focus:border-brand-blue focus:ring-1 focus:ring-[#A80000] dark:focus:ring-brand-blue transition duration-300 hover:bg-white dark:hover:bg-brand-dark/45" placeholder="Mô tả tóm tắt mục tiêu chiến dịch hoặc gói sản phẩm..."></textarea>
-                        </div>
-                        <button type="submit" class="bg-[#A80000] hover:bg-[#8B0000] dark:bg-brand-blue dark:hover:bg-blue-600 text-white font-black py-2.5 px-6 rounded-lg transition duration-300 w-full md:w-auto shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 text-xs uppercase tracking-wider flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-paper-plane text-[10px]"></i> Gửi yêu cầu hợp tác
+                    
+                    <div class="bg-slate-50/50 dark:bg-brand-dark/30 border border-gray-250 dark:border-white/10 rounded-xl p-6 text-center">
+                        <p class="text-sm text-slate-600 dark:text-gray-300 mb-5 leading-relaxed">
+                            Để tối ưu hóa thời gian và tư vấn chính xác nhất, Báo Lao Động hỗ trợ tiếp nhận yêu cầu tự động qua Hệ thống Trợ lý ảo thông minh.
+                        </p>
+                        <button onclick="openChatWithContext('Tôi muốn nhận tư vấn hợp tác')" class="w-full sm:w-auto bg-[#A80000] hover:bg-[#8B0000] dark:bg-brand-blue dark:hover:bg-blue-600 text-white font-black py-3 px-8 rounded-lg transition duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-comments text-[12px]"></i> Trò chuyện & Gửi yêu cầu ngay
                         </button>
-                    </form>
+                    </div>
+    
                 </div>
             </div>
             
@@ -2965,6 +2904,35 @@
                         btn.disabled = false;
                         btn.innerHTML = '<i class="fa-solid fa-paper-plane text-[10px]"></i> Gửi lại';
                     }
+                }
+            };
+
+            // --- OPEN CHAT WITH CONTEXT ---
+            window.openChatWithContext = function(contextMsg) {
+                const chatbotWindow = document.getElementById('chatbot-window');
+                const chatbotTrigger = document.getElementById('chatbot-trigger');
+                
+                // Open chat if closed
+                if (chatbotWindow && chatbotWindow.classList.contains('hidden')) {
+                    if (chatbotTrigger) {
+                        chatbotTrigger.classList.add('scale-0');
+                        setTimeout(() => {
+                            chatbotTrigger.classList.add('hidden');
+                            chatbotWindow.classList.remove('hidden');
+                            setTimeout(() => {
+                                chatbotWindow.classList.remove('opacity-0', 'translate-y-4');
+                                // Wait for chat to open, then trigger context
+                                setTimeout(() => {
+                                    appendMessage('user', contextMsg);
+                                    handleBotResponse(contextMsg);
+                                }, 300);
+                            }, 50);
+                        }, 150);
+                    }
+                } else {
+                    // Chat already open
+                    appendMessage('user', contextMsg);
+                    handleBotResponse(contextMsg);
                 }
             };
         });
