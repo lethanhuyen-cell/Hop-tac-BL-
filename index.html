@@ -2122,7 +2122,7 @@
 
         // 5. Media Kit Form Submit Handling
         const mediaKitForm = document.getElementById('media-kit-form');
-        mediaKitForm.addEventListener('submit', (e) => {
+        if (mediaKitForm) mediaKitForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
             const nameInput = document.getElementById('media-name');
@@ -2223,7 +2223,7 @@
 
         // 6. Contact Form Submit Handling
         const contactForm = document.getElementById('contact-form');
-        contactForm.addEventListener('submit', (e) => {
+        if (contactForm) contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
             const nameInput = document.getElementById('contact-name');
