@@ -3148,8 +3148,8 @@
             <!-- Header (Premium Gradient incorporating Brand Colors) -->
             <div class="bg-gradient-to-r from-[#A80000] via-[#BE1E2D] to-brand-blue p-4 text-white flex items-center justify-between shadow-md relative overflow-hidden">
                 <!-- Decorative background elements -->
-                <div class="absolute -right-6 -top-6 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
-                <div class="absolute -left-6 -bottom-6 w-20 h-20 bg-black/10 rounded-full blur-xl"></div>
+                <div class="absolute -right-6 -top-6 w-20 h-20 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
+                <div class="absolute -left-6 -bottom-6 w-20 h-20 bg-black/10 rounded-full blur-xl pointer-events-none"></div>
                 
                 <div class="flex items-center gap-3 relative z-10">
                     <div class="relative w-10 h-10 rounded-full border-2 border-white/30 overflow-hidden bg-gray-150 shadow-inner">
@@ -3163,7 +3163,7 @@
                         </p>
                     </div>
                 </div>
-                <button id="close-chatbot-window" class="text-white/85 hover:text-white transition w-10 h-10 flex items-center justify-center hover:bg-white/10 rounded-lg" aria-label="Close Chat">
+                <button id="close-chatbot-window" class="relative z-10 text-white/85 hover:text-white transition w-10 h-10 flex items-center justify-center hover:bg-white/10 rounded-lg" aria-label="Close Chat">
                     <i class="fa-solid fa-xmark text-xl"></i>
                 </button>
             </div>
