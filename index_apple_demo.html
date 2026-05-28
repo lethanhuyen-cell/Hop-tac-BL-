@@ -2589,6 +2589,11 @@
                         const text = btn.textContent;
                         appendMessage('user', text);
                         handleBotResponse(text);
+                        // Hide suggestions after user makes a choice
+                        const suggestionsArea = document.getElementById('chatbot-suggestions');
+                        if (suggestionsArea) {
+                            suggestionsArea.classList.add('hidden');
+                        }
                     });
                 });
             }
@@ -2604,6 +2609,11 @@
                     appendMessage('user', text);
                     chatbotInput.value = '';
                     handleBotResponse(text);
+                    // Hide suggestions when user sends a custom message
+                    const suggestionsArea = document.getElementById('chatbot-suggestions');
+                    if (suggestionsArea) {
+                        suggestionsArea.classList.add('hidden');
+                    }
                 });
             }
 
@@ -3103,6 +3113,12 @@
                         bubble.classList.add('opacity-0', 'translate-y-2');
                         setTimeout(() => { bubble.classList.add('hidden'); }, 300);
                     }
+                }
+                
+                // Hide suggestions when opening with context
+                const suggestionsArea = document.getElementById('chatbot-suggestions');
+                if (suggestionsArea) {
+                    suggestionsArea.classList.add('hidden');
                 }
                 
                 // Open chat if closed
