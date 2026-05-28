@@ -3094,6 +3094,17 @@
                 const chatbotWindow = document.getElementById('chatbot-window');
                 const chatbotTrigger = document.getElementById('chatbot-trigger');
                 
+                // Hide speech bubble if active
+                if (typeof hideBubble === 'function') {
+                    hideBubble();
+                } else {
+                    const bubble = document.getElementById('chatbot-bubble');
+                    if (bubble) {
+                        bubble.classList.add('opacity-0', 'translate-y-2');
+                        setTimeout(() => { bubble.classList.add('hidden'); }, 300);
+                    }
+                }
+                
                 // Open chat if closed
                 if (chatbotWindow && chatbotWindow.classList.contains('hidden')) {
                     if (chatbotTrigger) {
