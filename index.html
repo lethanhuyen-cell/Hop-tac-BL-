@@ -1868,6 +1868,7 @@
     <div id="toast-container" class="fixed top-6 right-6 z-50 flex flex-col gap-3 max-w-sm w-full px-4"></div>
 
     <script>
+        const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzTgSd4t4lY-DrWUMz770cXbe1fTTlSGNanoCyefksXqs9XVDwLr-yl58qqAORLXp84/exec";
         // 0. Dark Mode Switcher Logic
         window.addEventListener('DOMContentLoaded', () => {
             const darkModeToggle = document.getElementById('dark-mode-toggle');
@@ -2159,6 +2160,21 @@
                 return;
             }
 
+            // Send to Google Apps Script
+            fetch(APPS_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: nameInput.value.trim(),
+                    company: companyInput.value.trim(),
+                    email: emailInput.value.trim(),
+                    phone: phoneInput.value.trim(),
+                    needs: needsSelect.value,
+                    source: 'Form Đăng ký Media Kit'
+                })
+            }).catch(err => console.error('Error submitting media kit:', err));
+
             // Success action: Show beautiful glassmorphic modal with progress countdown
             showToast('success', 'Gửi yêu cầu thành công!', 'Tài liệu Media Kit & Báo giá 2026 đang được gửi tới email ' + emailInput.value.trim() + '.');
             
@@ -2259,6 +2275,21 @@
                 showToast('error', 'Lỗi nhập liệu', 'Vui lòng kiểm tra lại thông tin và nhập đầy đủ các trường yêu cầu (*).');
                 return;
             }
+
+            // Send to Google Apps Script
+            fetch(APPS_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: nameInput.value.trim(),
+                    company: companyInput.value.trim(),
+                    email: emailInput.value.trim(),
+                    phone: phoneInput.value.trim(),
+                    message: messageInput.value.trim(),
+                    source: 'Form Liên hệ hợp tác'
+                })
+            }).catch(err => console.error('Error submitting contact form:', err));
 
             // Success action
             showToast('success', 'Đã tiếp nhận yêu cầu!', 'Cảm ơn ' + nameInput.value.trim() + '. Đội ngũ Báo Lao Động sẽ phản hồi trong thời gian sớm nhất.');
@@ -2775,7 +2806,7 @@
             // ================================================================
             // CONTACT FORM - Google Apps Script Integration
             // ================================================================
-            const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzTgSd4t4lY-DrWUMz770cXbe1fTTlSGNanoCyefksXqs9XVDwLr-yl58qqAORLXp84/exec";
+            // (APPS_SCRIPT_URL is defined globally at the top of the script tag)
 
             // Show contact form inside chat window
             window.showContactForm = function() {
