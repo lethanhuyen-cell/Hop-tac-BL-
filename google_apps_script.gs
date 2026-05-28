@@ -61,44 +61,12 @@ function doGet(e) {
 // ================================================================
 function writeToSheet(timestamp, name, phone, email, company, message, source) {
   const ss = SPREADSHEET_ID ? SpreadsheetApp.openById(SPREADSHEET_ID) : SpreadsheetApp.getActiveSpreadsheet();
-  let sheet = ss.getSheetByName(SHEET_NAME);
-
-  // Tạo sheet nếu chưa có
+  
+  // Tự động chọn sheet đầu tiên trong file của bạn
+  let sheet = ss.getSheets()[0];
   if (!sheet) {
     sheet = ss.insertSheet(SHEET_NAME);
-    // Tạo header row
-    sheet.appendRow([
-      "STT",
-      "Thời gian",
-      "Họ tên",
-      "Số điện thoại",
-      "Email",
-      "Doanh nghiệp",
-      "Tin nhắn / Dịch vụ",
-      "Nguồn",
-      "Trạng thái"
-    ]);
-    // Định dạng header
-    const headerRange = sheet.getRange(1, 1, 1, 9);
-    headerRange.setBackground("#A80000");
-    headerRange.setFontColor("#FFFFFF");
-    headerRange.setFontWeight("bold");
-    sheet.setFrozenRows(1);
-    // Độ rộng cột
-    sheet.setColumnWidth(1, 50);
-    sheet.setColumnWidth(2, 160);
-    sheet.setColumnWidth(3, 185);
-    sheet.setColumnWidth(4, 135);
-    sheet.setColumnWidth(5, 185);
-    sheet.setColumnWidth(6, 160);
-    sheet.setColumnWidth(7, 250);
-    sheet.setColumnWidth(8, 150);
-    sheet.setColumnWidth(9, 120);
   }
-
-  // Số thứ tự
-  const lastRow = sheet.getLastRow();
-  const stt = lastRow; // row 1 là header, nên lastRow = số bản ghi hiện tại
 
   // Format thời gian theo VN
   const formattedTime = Utilities.formatDate(
@@ -107,24 +75,21 @@ function writeToSheet(timestamp, name, phone, email, company, message, source) {
     "dd/MM/yyyy HH:mm:ss"
   );
 
-  // Ghi dữ liệu
+  // Ghi dữ liệu đúng thứ tự các cột trong ảnh:
+  // Cột A: Họ và tên
+  // Cột B: Số điện thoại
+  // Cột C: Dịch vụ quan tâm
+  // Cột D: Email
+  // Cột E: Ngày đăng ký
+  // Cột F: Ghi chú (Nguồn gửi)
   sheet.appendRow([
-    stt,
-    formattedTime,
     name,
     phone,
-    email,
-    company,
     message,
-    source,
-    "Chưa xử lý" // Trạng thái mặc định
+    email,
+    formattedTime,
+    source
   ]);
-
-  // Tô màu dòng mới theo kiểu zebra
-  const newRow = sheet.getLastRow();
-  if (newRow % 2 === 0) {
-    sheet.getRange(newRow, 1, 1, 9).setBackground("#FFF8F0");
-  }
 }
 
 // ================================================================
