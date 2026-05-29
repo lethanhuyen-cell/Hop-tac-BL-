@@ -21,20 +21,23 @@
 3. **Làm lại chân trang (Sitemap Footer) phong cách Apple**:
    - Thay thế footer cơ bản bằng hệ thống Sitemap Grid 4 cột chuẩn Apple giúp phân loại đường dẫn khoa học.
    - Tối giản hóa các icon mạng xã hội và phần bản quyền dưới cùng.
-4. **Deploy & Cập nhật**:
+4. **Bổ sung cột mốc Hành trình Lịch sử (2024-2026)**:
+   - Đã bổ sung cột mốc thứ 6: **"2024-2026: Nền tảng Đa ngôn ngữ"** (vận hành nền tảng báo điện tử tích hợp hệ thống dịch tự động và xuất bản nội dung bằng 8 ngôn ngữ toàn cầu) vào cả hai phiên bản `index.html` và `index_apple_demo.html`.
+   - Cập nhật chia cột lưới hiển thị từ `lg:grid-cols-5` thành `lg:grid-cols-6` để hiển thị cân đối cả 6 cột mốc trên thiết bị màn hình lớn.
+5. **Deploy & Cập nhật**:
    - Toàn bộ thay đổi đã được đẩy lên nhánh `main` và Vercel tự động build/deploy công khai.
 
 ---
 
 ## 2. Đường dẫn các trang đang hoạt động (Đã được Vercel Deploy công khai)
 
-- 🔗 **Trang chính gốc**: [https://web-du-an-ca-nhan-nkk3sa2sv-lethanhuyen-8639s-projects.vercel.app](https://web-du-an-ca-nhan-nkk3sa2sv-lethanhuyen-8639s-projects.vercel.app)
-- 🔗 **Trang Demo Apple**: [https://web-du-an-ca-nhan-nkk3sa2sv-lethanhuyen-8639s-projects.vercel.app/index_apple_demo.html](https://web-du-an-ca-nhan-nkk3sa2sv-lethanhuyen-8639s-projects.vercel.app/index_apple_demo.html)
+- 🔗 **Trang chính gốc**: [https://web-du-an-ca-nhan-3hyl56jco-lethanhuyen-8639s-projects.vercel.app](https://web-du-an-ca-nhan-3hyl56jco-lethanhuyen-8639s-projects.vercel.app)
+- 🔗 **Trang Demo Apple**: [https://web-du-an-ca-nhan-3hyl56jco-lethanhuyen-8639s-projects.vercel.app/index_apple_demo.html](https://web-du-an-ca-nhan-3hyl56jco-lethanhuyen-8639s-projects.vercel.app/index_apple_demo.html)
 
 ---
 
 ## 3. Các mục lưu ý cho phiên làm việc tiếp theo
 
 - **Vị trí file mã nguồn chính**:
-  - `index.html` (Bản gốc đã sửa lỗi chatbot).
-  - `index_apple_demo.html` (Bản thiết kế phong cách Apple đã được tối ưu hóa toàn diện).
+  - `index.html` (Bản gốc đã sửa lỗi chatbot & bổ sung mốc lịch sử).
+  - `index_apple_demo.html` (Bản thiết kế phong cách Apple đã được tối ưu hóa toàn diện & bổ sung mốc lịch sử).
