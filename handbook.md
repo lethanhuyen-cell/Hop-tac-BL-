@@ -8,27 +8,28 @@
 
 ---
 
-## 1. Nhật ký phiên làm việc (2026-05-28)
+## 1. Nhật ký phiên làm việc (2026-05-29)
 
 ### Các công việc đã hoàn thành:
-1. **Sửa lỗi nút đóng (Close Button) của Chatbot**:
-   - Thêm `pointer-events-none` cho các thẻ trang trí tuyệt đối trong header và `relative z-10` cho nút `#close-chatbot-window` tại file `index.html` và `index_apple_demo.html`.
-2. **Thiết kế & Triển khai phiên bản Demo phong cách Apple**:
-   - Tạo bản sao demo tại file `index_apple_demo.html`.
-   - Thiết lập giao diện tối giản, sang trọng: thu gọn Header (`h-14`), làm mờ kính `backdrop-blur-lg`, đổi nền Hero sang màu xám/đen đơn sắc, phông chữ Sans-serif mảnh tương phản cao và sử dụng nút bấm dạng viên thuốc.
-3. **Cấu hình & Mở khóa Vercel**:
-   - Gửi yêu cầu PATCH tới REST API Vercel để tắt chế độ bảo mật đăng nhập (`ssoProtection = null`). Giúp link deploy truy cập công khai không bị lỗi 401.
-4. **Sửa lỗi đè lớp Bong bóng chào mừng (Bubble)**:
-   - Sửa hàm `openChatWithContext()` để tự động gọi `hideBubble()` ẩn bong bóng thoại khi mở khung chat.
-5. **Tối ưu hóa hiển thị Gợi ý nhanh (Suggestions)**:
-   - Cấu hình tự động ẩn hộp gợi ý `#chatbot-suggestions` ngay khi người dùng chọn một mục hoặc tự gõ tin nhắn gửi đi, giữ cho khung chat gọn gàng và logic.
+1. **Tối ưu hóa Bảng giá / Gói dịch vụ (Pricing Table)**:
+   - Loại bỏ các biểu tượng emoji không phù hợp với chuẩn B2B cao cấp.
+   - Định hình các nút bấm dạng viên thuốc phẳng (Pill-shape): Gói Starter & Premium dùng nút viền xám sáng tối giản; Gói Standard (Nổi bật) dùng nút đen tuyền sang trọng làm điểm nhấn chính.
+   - Thay checkmark đỏ thành checkmark xám nhẹ thanh lịch để tạo độ tương phản dịu mắt.
+2. **Tối ưu hóa mục Sự kiện (Events Section)**:
+   - Thay thế các nút hộp vuông màu đỏ đậm thành các nút viên thuốc xám/đen bo tròn sang trọng.
+   - Tinh giản định dạng tag chương trình (Ví dụ: *"Chương trình Quốc gia"*, *"Bảng xếp hạng"*) thành các tag bo tròn nền kính mờ `backdrop-blur-md` kết hợp viền hairline siêu mảnh.
+3. **Làm lại chân trang (Sitemap Footer) phong cách Apple**:
+   - Thay thế footer cơ bản bằng hệ thống Sitemap Grid 4 cột chuẩn Apple giúp phân loại đường dẫn khoa học.
+   - Tối giản hóa các icon mạng xã hội và phần bản quyền dưới cùng.
+4. **Deploy & Cập nhật**:
+   - Toàn bộ thay đổi đã được đẩy lên nhánh `main` và Vercel tự động build/deploy công khai.
 
 ---
 
 ## 2. Đường dẫn các trang đang hoạt động (Đã được Vercel Deploy công khai)
 
-- 🔗 **Trang chính gốc**: [https://web-du-an-ca-nhan-hzczsabyy-lethanhuyen-8639s-projects.vercel.app](https://web-du-an-ca-nhan-hzczsabyy-lethanhuyen-8639s-projects.vercel.app)
-- 🔗 **Trang Demo Apple**: [https://web-du-an-ca-nhan-hzczsabyy-lethanhuyen-8639s-projects.vercel.app/index_apple_demo.html](https://web-du-an-ca-nhan-hzczsabyy-lethanhuyen-8639s-projects.vercel.app/index_apple_demo.html)
+- 🔗 **Trang chính gốc**: [https://web-du-an-ca-nhan-nkk3sa2sv-lethanhuyen-8639s-projects.vercel.app](https://web-du-an-ca-nhan-nkk3sa2sv-lethanhuyen-8639s-projects.vercel.app)
+- 🔗 **Trang Demo Apple**: [https://web-du-an-ca-nhan-nkk3sa2sv-lethanhuyen-8639s-projects.vercel.app/index_apple_demo.html](https://web-du-an-ca-nhan-nkk3sa2sv-lethanhuyen-8639s-projects.vercel.app/index_apple_demo.html)
 
 ---
 
@@ -36,8 +37,4 @@
 
 - **Vị trí file mã nguồn chính**:
   - `index.html` (Bản gốc đã sửa lỗi chatbot).
-  - `index_apple_demo.html` (Bản thiết kế phong cách Apple).
-- **Quy tắc thao tác file**:
-  - Luôn sử dụng định dạng kết thúc dòng CRLF (`
-`) khi cập nhật các file HTML.
-  - Vercel được kết nối tự động với GitHub. Đẩy mã nguồn lên nhánh `main` bằng lệnh `git push origin main` sẽ tự động kích hoạt tiến trình deploy.
+  - `index_apple_demo.html` (Bản thiết kế phong cách Apple đã được tối ưu hóa toàn diện).
